@@ -1,0 +1,119 @@
+.page {
+  min-height: 100vh;
+  color: white;
+  background:
+    radial-gradient(circle at -5% 95%, #3f1458 10%, transparent 40%),
+    radial-gradient(circle at 120% 10%, #3f1458 15%, transparent 15%),
+    radial-gradient(circle at 100% 100%, #3f1458 15%, transparent 40%),
+    #882bbe;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 26px 20px 54px;
+}
+
+.top {
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.backLink {
+  display: inline-block;
+  color: white;
+  opacity: 0.9;
+  text-decoration: none;
+  margin-bottom: 14px;
+}
+
+.backLink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.top h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.06;
+  margin-bottom: 8px;
+}
+
+.top p {
+  font-size: 0.96rem;
+  opacity: 0.9;
+}
+
+.listWrap {
+  margin-top: 10px;
+}
+
+.teamList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.teamRow {
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: linear-gradient(130deg, rgb(255 255 255 / 12%) 0%, rgb(255 255 255 / 4%) 100%);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teamRow:hover {
+  transform: translateX(-8px);
+  box-shadow: 16px 10px 30px rgb(0 0 0 / 25%);
+}
+
+.teamName {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.mainInfo {
+  min-width: 0;
+}
+
+.teamMeta {
+  font-size: 0.88rem;
+  margin-top: 4px;
+  opacity: 0.86;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid white;
+  border-radius: 999px;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.teamRow:hover .actionButton {
+  background-color: white;
+  color: #3f1458;
+  transform: scale(1.1);
+}
+
+@media (width <= 900px) {
+  .teamRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
