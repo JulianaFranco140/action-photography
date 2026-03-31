@@ -55,35 +55,45 @@
   background-color: #9833d2;
 }
 
-.searchBar {
+.rightControls {
   display: flex;
   align-items: center;
-  background-color: rgb(255 255 255 / 20%);
-  border-radius: 25px;
-  padding: 4px 15px;
-  box-shadow: 0 10px 30px #3f14584d;
 }
 
-.searchBar input {
-  background: transparent;
-  border: none;
+.authActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loginButton,
+.registerButton {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.loginButton {
   color: white;
-  outline: none;
-  padding: 5px 10px;
-  width: 200px;
+  border: 1px solid rgb(255 255 255 / 45%);
+  background: rgb(255 255 255 / 10%);
 }
 
-.searchBar input::placeholder {
-  color: rgb(255 255 255 / 40%);
+.registerButton {
+  color: #3f1458;
+  border: 1px solid transparent;
+  background: white;
 }
 
-.searchBar button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 5px;
+.loginButton:hover {
+  background: rgb(255 255 255 / 18%);
+}
+
+.registerButton:hover {
+  background: #f2e8fb;
 }
 
 @media (width <= 920px) {
@@ -99,13 +109,14 @@
     justify-content: center;
   }
 
-  .searchBar {
+  .rightControls {
     order: 2;
-    width: min(420px, 100%);
+    width: 100%;
+    justify-content: center;
   }
 
-  .searchBar input {
-    width: 100%;
+  .authActions {
+    justify-content: center;
   }
 
   .navLink {

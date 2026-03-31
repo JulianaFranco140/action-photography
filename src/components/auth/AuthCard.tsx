@@ -55,6 +55,10 @@ export default function AuthCard({ mode }: AuthCardProps) {
         </div>
 
         <div className={styles.formPanel}>
+          <Link href="/" className={styles.homeLink} aria-label="Volver al inicio" title="Inicio">
+            <span className={styles.homeIcon}>←</span>
+            <span className={styles.homeText}>Inicio</span>
+          </Link>
           {isLogin ? <LoginForm /> : <RegisterForm />}
         </div>
       </section>
