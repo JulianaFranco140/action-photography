@@ -111,3 +111,22 @@ export const EVENTS: EventItem[] = [
 export function getEventBySlug(slug: string) {
   return EVENTS.find((event) => event.slug === slug);
 }
+
+export function slugifyText(value: string) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
+
+export function getTeamBySlug(eventSlug: string, teamSlug: string) {
+  const event = getEventBySlug(eventSlug);
+  if (!event) return undefined;
+
+  const team = event.teams.find((item) => slugifyText(item.name) === teamSlug);
+  if (!team) return undefined;
+
+  return { event, team };
+}

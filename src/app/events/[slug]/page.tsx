@@ -1,5 +1,4 @@
-import SiteHeader from "@/components/layout/SiteHeader";
-import { EVENTS, getEventBySlug } from "@/data/events";
+import { EVENTS, getEventBySlug, slugifyText } from "@/data/events";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -22,8 +21,6 @@ export default async function EventDetailsPage({ params }: EventDetailsPageProps
 
   return (
     <div className={styles.page}>
-      <SiteHeader active="eventos" />
-
       <main className={styles.container}>
         <section className={styles.top}>
           <Link href="/events" className={styles.backLink}>
@@ -45,9 +42,13 @@ export default async function EventDetailsPage({ params }: EventDetailsPageProps
                     {team.city} · {team.category}
                   </p>
                 </div>
-                <button type="button" className={styles.actionButton} aria-label={`Ver equipo ${team.name}`}>
+                <Link
+                  href={`/events/${event.slug}/team/${slugifyText(team.name)}`}
+                  className={styles.actionButton}
+                  aria-label={`Ver equipo ${team.name}`}
+                >
                   →
-                </button>
+                </Link>
               </li>
             ))}
           </ul>

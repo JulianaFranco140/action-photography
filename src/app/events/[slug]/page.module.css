@@ -12,11 +12,11 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 26px 20px 54px;
+  padding: 34px 20px 54px;
 }
 
 .top {
-  margin-top: 8px;
+  margin-top: 0;
   margin-bottom: 18px;
 }
 
@@ -102,6 +102,7 @@
   font-size: 20px;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
