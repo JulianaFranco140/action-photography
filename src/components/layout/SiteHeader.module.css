@@ -1,0 +1,115 @@
+.header {
+  padding: 20px 0 0 0;
+  background-color: transparent;
+  border-radius: 0 0 40px 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255 255 255 / 20%);
+  border-radius: 25px;
+  padding: 10px 35px;
+  box-shadow: 0 10px 30px #3f14584d;
+  box-sizing: border-box;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.3s;
+  padding: 5px 30px;
+}
+
+.navLink:hover,
+.active {
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.active {
+  background-color: #3f14584a;
+}
+
+.navLink:hover {
+  background-color: #9833d2;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255 255 255 / 20%);
+  border-radius: 25px;
+  padding: 4px 15px;
+  box-shadow: 0 10px 30px #3f14584d;
+}
+
+.searchBar input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 5px 10px;
+  width: 200px;
+}
+
+.searchBar input::placeholder {
+  color: rgb(255 255 255 / 40%);
+}
+
+.searchBar button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+@media (width <= 920px) {
+  .container {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .navbar {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .searchBar {
+    order: 2;
+    width: min(420px, 100%);
+  }
+
+  .searchBar input {
+    width: 100%;
+  }
+
+  .navLink {
+    padding: 5px 16px;
+    font-size: 13px;
+  }
+}

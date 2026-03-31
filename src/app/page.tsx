@@ -1,60 +1,11 @@
 import styles from "./page.module.css";
+import SiteHeader from "@/components/layout/SiteHeader";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <div className={styles.container}>
-          <div className={styles.logo}>
-            <img src="/Logo Action Blanco.svg" alt="Action Photography" />
-          </div>
-          <nav className={styles.navbar}>
-            <ul>
-              <li>
-                <a href="#" className={styles.active}>
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a href="pages/events/">Eventos</a>
-              </li>
-              <li>
-                <a href="pages/our_job/">Nuestro Trabajo</a>
-              </li>
-              <li>
-                <a href="#">Contacto</a>
-              </li>
-            </ul>
-          </nav>
-          <div className={styles.searchBar}>
-            <input type="text" placeholder="Buscar evento..." />
-            <button type="submit" aria-label="Buscar">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M19 19L14.65 14.65"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader active="inicio" />
 
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -63,7 +14,9 @@ export default function Home() {
             <p>
               Encuentra las mejores fotos de tu equipo de cheerleading. Momentos únicos capturados por profesionales.
             </p>
-            <button className={styles.ctaButton}>Ver todos los Eventos</button>
+            <Link className={styles.ctaButton} href="/events">
+              Ver todos los Eventos
+            </Link>
           </div>
           <div className={styles.heroImages}>
             <img src="/cheer2.png" className={`${styles.photo} ${styles.photoLeft}`} alt="Cheerleading" />
@@ -112,10 +65,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={styles.exploreCard}>
+            <Link href="/events" className={styles.exploreCard}>
               <p>Sigue explorando más eventos</p>
-              <button className={styles.arrowButton}>→</button>
-            </div>
+              <span className={styles.arrowButton}>→</span>
+            </Link>
           </div>
         </div>
       </section>
