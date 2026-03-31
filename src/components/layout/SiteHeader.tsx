@@ -35,9 +35,9 @@ export default function SiteHeader({ active = "inicio" }: SiteHeaderProps) {
               </a>
             </li>
             <li>
-              <a href="#" className={`${styles.navLink} ${active === "contacto" ? styles.active : ""}`}>
+              <Link href="/contact" className={`${styles.navLink} ${active === "contacto" ? styles.active : ""}`}>
                 Contacto
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
