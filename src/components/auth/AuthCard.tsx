@@ -9,6 +9,7 @@ type AuthCardProps = {
 
 export default function AuthCard({ mode }: AuthCardProps) {
   const isLogin = mode === "login";
+  const isRegister = mode === "register";
   const isRecover = mode === "recover";
   const isRecoverCode = mode === "recover-code";
   const content = isLogin
@@ -40,7 +41,7 @@ export default function AuthCard({ mode }: AuthCardProps) {
 
   return (
     <main className={styles.page}>
-      <section className={styles.authCard}>
+      <section className={`${styles.authCard} ${isRegister ? styles.authCardReversed : ""}`}>
         <div className={styles.welcomePanel}>
           <div className={styles.welcomeTop}>
             <img className={styles.brandLogo} src="/Logo Action Blanco.svg" alt="Logo Action Photography" />
