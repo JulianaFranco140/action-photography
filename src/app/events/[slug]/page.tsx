@@ -2,6 +2,7 @@ import { EVENTS, getEventBySlug, slugifyText } from "@/data/events";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import SiteHeader from "@/components/layout/SiteHeader";
 
 type EventDetailsPageProps = {
   params: Promise<{ slug: string }>;
@@ -21,16 +22,20 @@ export default async function EventDetailsPage({ params, searchParams }: EventDe
     notFound();
   }
 
+  const selectedDayLabel = day ? `Dia elegido: ${day}` : "Todos los dias";
+
   return (
     <div className={styles.page}>
+      <SiteHeader active={null} />
       <main className={styles.container}>
         <section className={styles.top}>
+            
           <Link href="/events" className={styles.backLink}>
             ← Volver a eventos
           </Link>
           <h1>{event.name}</h1>
           <p>
-            {event.city} · {day ?? event.date} · {event.photos}
+            {event.city} · {selectedDayLabel} · {event.photos}
           </p>
         </section>
 

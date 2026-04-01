@@ -36,6 +36,7 @@ function EventSection({
   onOpenModal: (event: EventItem) => void;
 }) {
   return (
+    
     <section className={styles.sectionBlock}>
       <header className={styles.sectionHeader}>
         <h2>

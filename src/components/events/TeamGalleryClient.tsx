@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import styles from "@/app/events/[slug]/team/[teamSlug]/page.module.css";
+import SiteHeader from "@/components/layout/SiteHeader";
 
 type Team = {
   name: string;
@@ -70,6 +71,7 @@ export default function TeamGalleryClient({ event, team, photos }: TeamGalleryCl
 
   return (
     <div className={styles.page}>
+      <SiteHeader active={null} />
       <main className={styles.container}>
         <section className={styles.topBar}>
           <div>

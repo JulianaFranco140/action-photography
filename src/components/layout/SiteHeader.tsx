@@ -4,7 +4,7 @@ import styles from "./SiteHeader.module.css";
 type NavKey = "inicio" | "eventos" | "trabajo" | "contacto";
 
 type SiteHeaderProps = {
-  active?: NavKey;
+  active?: NavKey | null;
 };
 
 export default function SiteHeader({ active = "inicio" }: SiteHeaderProps) {
