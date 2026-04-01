@@ -273,14 +273,53 @@
 
 @media (width <= 600px) {
   .page {
-    padding: 16px;
+    padding: 10px;
+  }
+
+  .authCard {
+    border-radius: 18px;
   }
 
   .welcomePanel h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .formPanel h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  .welcomePanel,
+  .formPanel {
+    padding: 18px 14px;
+  }
+
+  .description,
+  .bullets li,
+  .switchText {
+    font-size: 0.85rem;
+  }
+
+  .form {
+    gap: 6px;
+  }
+
+  .form label {
+    font-size: 0.8rem;
+  }
+
+  .form input {
+    padding: 10px 11px;
+    font-size: 0.86rem;
+  }
+
+  .homeLink {
+    width: 96px;
+    height: 34px;
+    padding: 0 10px;
+  }
+
+  .homeText {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

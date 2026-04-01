@@ -2,41 +2,31 @@
   --violet-1: #9833d2;
   --violet-2: #b976ee;
   --violet-3: #3f1458;
-  --violet-4: #68659d;
-  --violet-5: #5c528b;
+  --violet-5: #882bbe;
 
-  height: 100dvh;
-  overflow: hidden;
+  min-height: 100vh;
   color: white;
   background:
-    radial-gradient(circle at -5% 95%, var(--violet-3) 12%, transparent 42%),
-    radial-gradient(circle at 120% 10%, var(--violet-1) 12%, transparent 20%),
-    radial-gradient(circle at 100% 100%, var(--violet-3) 16%, transparent 44%),
+    radial-gradient(circle at -5% 95%, var(--violet-3) 10%, transparent 40%),
+    radial-gradient(circle at 120% 10%, var(--violet-3) 15%, transparent 15%),
+    radial-gradient(circle at 100% 100%, var(--violet-3) 15%, transparent 40%),
     var(--violet-5);
   background-attachment: fixed;
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
-  height: calc(100dvh - 86px);
-  padding: 10px 22px 16px;
-  display: grid;
-  align-content: center;
-  grid-template-rows: auto auto;
-  row-gap: 18px;
+  padding: 24px 20px 56px;
 }
 
 .hero {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 18px;
   display: grid;
   grid-template-columns: 230px minmax(0, 1fr);
   align-items: center;
   gap: 18px;
-  max-width: 1020px;
-  margin-inline: auto;
-  width: 100%;
 }
 
 .mascotWrap {
@@ -107,9 +97,6 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   gap: 14px;
-  max-width: 1020px;
-  margin-inline: auto;
-  width: 100%;
 }
 
 .contactCard {
@@ -162,16 +149,8 @@
 }
 
 @media (width <= 980px) {
-  .page {
-    height: auto;
-    min-height: 100dvh;
-    overflow: auto;
-  }
-
   .container {
-    height: auto;
-    padding: 14px 16px 28px;
-    display: block;
+    padding: 18px 16px 34px;
   }
 
   .hero {
@@ -187,7 +166,7 @@
 
 @media (width <= 640px) {
   .container {
-    padding: 18px 14px 44px;
+    padding: 16px 14px 30px;
   }
 
   .hero {
@@ -208,7 +187,7 @@
   .speechBubble {
     text-align: left;
     border-radius: 20px;
-    padding: 18px 18px 16px;
+    padding: 16px 16px 14px;
   }
 
   .speechBubble::before {

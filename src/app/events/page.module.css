@@ -59,7 +59,7 @@
 
 .filters {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 10px;
   min-width: 0;
 }
@@ -90,7 +90,7 @@
   border-radius: 25px;
   padding: 4px 15px;
   box-shadow: 0 10px 30px #3f14584d;
-  min-width: 300px;
+  min-width: 260px;
   flex: 0 0 320px;
 }
 
@@ -207,13 +207,19 @@
 }
 
 @media (width <= 980px) {
+  .container {
+    padding: 18px 16px 36px;
+  }
+
   .filtersRow {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
   }
 
   .searchBar {
     min-width: 0;
+    flex: 1 1 auto;
   }
 
   .grid {
@@ -223,14 +229,41 @@
 
 @media (width <= 640px) {
   .container {
-    padding-bottom: 30px;
+    padding: 16px 14px 30px;
+  }
+
+  .marketIntro h1 {
+    line-height: 1.1;
+  }
+
+  .marketIntro p {
+    font-size: 0.95rem;
+  }
+
+  .filters {
+    gap: 8px;
+  }
+
+  .filters button {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+
+  .searchBar {
+    border-radius: 16px;
+    padding: 4px 10px;
   }
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .imageWrap {
-    height: 210px;
+    height: 200px;
+  }
+
+  .cardBody h2 {
+    min-height: 0;
   }
 }

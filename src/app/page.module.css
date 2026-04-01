@@ -119,6 +119,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
+  padding-top: 16px;
 }
 
 .heroContent {
@@ -162,6 +163,7 @@
   position: relative;
   width: 600px;
   height: 500px;
+  max-width: 100%;
 }
 
 .photoGrid {
@@ -356,32 +358,158 @@
   opacity: 0.7;
 }
 
-@media (width <= 768px) {
-  .header .container {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .navbar ul {
-    gap: 15px;
-    font-size: 12px;
-  }
-
+@media (width <= 1180px) {
   .hero .container {
-    flex-direction: column;
-    text-align: center;
+    gap: 24px;
   }
 
   .heroContent h1 {
-    font-size: 42px;
+    font-size: 52px;
+    margin-top: 0;
   }
 
-  .photoGrid {
-    transform: rotate(0deg);
+  .heroImages {
+    width: 520px;
+    height: 430px;
+  }
+
+  .eventsWrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .exploreCard {
+    grid-column: 1 / -1;
+    height: auto;
+    min-height: 180px;
+  }
+
+  .exploreCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgb(0 0 0 / 30%);
+  }
+}
+
+@media (width <= 900px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .heroContent {
+    max-width: 640px;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    margin-bottom: 12px;
+  }
+
+  .heroContent p {
+    margin-bottom: 20px;
+  }
+
+  .ctaButton {
+    display: inline-flex;
+  }
+
+  .heroImages {
+    width: min(100%, 420px);
+    height: 360px;
+    margin: 0 auto;
+  }
+
+  .photo {
+    width: 150px;
+  }
+
+  .photoLeft {
+    top: 24px;
+    left: 8%;
+    width: 130px;
+  }
+
+  .photoRight {
+    top: 56px;
+    left: 44%;
+    width: 150px;
+  }
+
+  .photoCenter {
+    top: 178px;
+    left: 22%;
+    width: 160px;
   }
 
   .mascot {
-    position: static;
-    margin-top: 20px;
+    right: -10px;
+    bottom: -4px;
+    width: 170px;
+  }
+
+  .recentEvents h2 {
+    font-size: 32px;
+  }
+}
+
+@media (width <= 768px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .eventsWrapper {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .eventImage {
+    margin-bottom: 14px;
+    border-radius: 20px;
+  }
+
+  .exploreCard {
+    border-radius: 20px;
+    min-height: 140px;
+    padding: 18px;
+  }
+
+  .exploreCard p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 26px 0;
+    margin-top: 26px;
+  }
+}
+
+@media (width <= 480px) {
+  .heroImages {
+    height: 320px;
+  }
+
+  .photoLeft {
+    top: 20px;
+    left: 0;
+    width: 124px;
+  }
+
+  .photoRight {
+    top: 56px;
+    left: 42%;
+    width: 140px;
+  }
+
+  .photoCenter {
+    top: 168px;
+    left: 16%;
+    width: 150px;
+  }
+
+  .mascot {
+    width: 150px;
+    right: -6px;
+    bottom: -10px;
   }
 }

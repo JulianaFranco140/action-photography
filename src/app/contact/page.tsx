@@ -27,7 +27,7 @@ export default function ContactPage() {
         <section className={styles.channelsSection}>
           <article className={styles.contactCard}>
             <p className={styles.areaLabel}>Área comercial</p>
-            <a className={styles.mainLink} href="https://wa.me/573134234069" target="_blank">
+            <a className={styles.mainLink} href="https://wa.me/573134234069" target="_blank" rel="noopener noreferrer">
               +57 313 423 40 69
             </a>
             <p className={styles.cardHint}>Cotizaciones, eventos y alianzas.</p>
@@ -35,7 +35,7 @@ export default function ContactPage() {
 
           <article className={styles.contactCard}>
             <p className={styles.areaLabel}>Área administrativa</p>
-            <a className={styles.mainLink} href="https://wa.me/573215237656" target="_blank">
+            <a className={styles.mainLink} href="https://wa.me/573215237656" target="_blank" rel="noopener noreferrer">
               +57 321 523 76 56
             </a>
             <p className={styles.cardHint}>Facturación, soporte y seguimiento.</p>

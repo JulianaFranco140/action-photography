@@ -74,13 +74,13 @@
   box-shadow: 16px 10px 30px rgb(0 0 0 / 25%);
 }
 
+.mainInfo {
+  min-width: 0;
+}
+
 .teamName {
   font-weight: 700;
   font-size: 1rem;
-}
-
-.mainInfo {
-  min-width: 0;
 }
 
 .teamMeta {
@@ -113,8 +113,39 @@
 }
 
 @media (width <= 900px) {
+  .container {
+    padding: 22px 16px 34px;
+  }
+
+  .top {
+    margin-bottom: 14px;
+  }
+
+  .teamRow {
+    border-radius: 14px;
+    padding: 12px 13px;
+  }
+
+  .teamRow:hover {
+    transform: none;
+    box-shadow: 0 12px 24px rgb(0 0 0 / 20%);
+  }
+}
+
+@media (width <= 700px) {
   .teamRow {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .teamMeta {
+    line-height: 1.3;
+  }
+
+  .actionButton {
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 }
