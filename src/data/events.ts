@@ -10,6 +10,7 @@ export type EventItem = {
   city: string;
   name: string;
   date: string;
+  days: string[];
   image: string;
   photos: string;
   teams: EventTeam[];
@@ -21,6 +22,7 @@ export const EVENTS: EventItem[] = [
     city: "Medellin",
     name: "World of Dance 2025",
     date: "15 Jun 2025",
+    days: ["15 Jun 2025", "16 Jun 2025", "17 Jun 2025"],
     image: "/event1.png",
     photos: "2,140 fotos",
     teams: [
@@ -36,6 +38,7 @@ export const EVENTS: EventItem[] = [
     city: "Cali",
     name: "Masters Super Cheer",
     date: "29 Jun 2025",
+    days: ["29 Jun 2025", "30 Jun 2025"],
     image: "/event2.png",
     photos: "1,822 fotos",
     teams: [
@@ -51,6 +54,7 @@ export const EVENTS: EventItem[] = [
     city: "Cucuta",
     name: "Cheer Celebrity Poitiers",
     date: "08 Jul 2025",
+    days: ["08 Jul 2025", "09 Jul 2025", "10 Jul 2025"],
     image: "/event3.png",
     photos: "2,009 fotos",
     teams: [
@@ -66,6 +70,7 @@ export const EVENTS: EventItem[] = [
     city: "Bogota",
     name: "Elite Nationals",
     date: "20 Jul 2025",
+    days: ["20 Jul 2025", "21 Jul 2025"],
     image: "/event1.png",
     photos: "1,566 fotos",
     teams: [
@@ -81,6 +86,7 @@ export const EVENTS: EventItem[] = [
     city: "Barranquilla",
     name: "Summer Spirit Open",
     date: "03 Ago 2025",
+    days: ["03 Ago 2025", "04 Ago 2025"],
     image: "/event2.png",
     photos: "2,342 fotos",
     teams: [
@@ -96,6 +102,7 @@ export const EVENTS: EventItem[] = [
     city: "Bucaramanga",
     name: "Power Stunt Festival",
     date: "16 Ago 2025",
+    days: ["16 Ago 2025", "17 Ago 2025"],
     image: "/event3.png",
     photos: "1,438 fotos",
     teams: [

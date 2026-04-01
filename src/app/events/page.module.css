@@ -169,6 +169,10 @@
   object-fit: cover;
 }
 
+.imageUpcoming img {
+  filter: grayscale(100%);
+}
+
 .sportTag,
 .statusTag {
   position: absolute;
@@ -252,9 +256,155 @@
   padding: 10px;
   font-size: 0.95rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .galleryLink:hover {
+  filter: brightness(1.08);
+}
+
+.upcomingHint {
+  margin-top: 12px;
+  color: #6f6795;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dateModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  background: rgb(7 5 12 / 64%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.dateModalOverlayVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dateModal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.98);
+  z-index: 1600;
+  width: min(560px, 92vw);
+  border-radius: 16px;
+  border: 1px solid #d6c8e8;
+  background: #fff;
+  color: #170f30;
+  box-shadow: 0 22px 44px rgb(0 0 0 / 34%);
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dateModalOpen {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.dateModalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dateModalHeader h3 {
+  font-size: 1.1rem;
+  color: #24123b;
+}
+
+.dateModalHeader button {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #2a1240;
+  background: #f2e8ff;
+  font-weight: 700;
+}
+
+.dateModalText {
+  margin-top: 8px;
+  color: #5f558b;
+  font-size: 0.9rem;
+}
+
+.daySelectWrap {
+  margin-top: 12px;
+}
+
+.daySelectLabel {
+  display: block;
+  margin-bottom: 6px;
+  color: #5f558b;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.daySelect {
+  width: 100%;
+  border: 1px solid #d8c5f0;
+  border-radius: 10px;
+  background: #fff;
+  color: #2a1240;
+  padding: 9px 10px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.daySelect:focus {
+  border-color: #8f36e2;
+  box-shadow: 0 0 0 2px rgb(143 54 226 / 15%);
+}
+
+.viewDayButton {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #d8c5f0;
+  border-radius: 10px;
+  background: #fff;
+  color: #2a1240;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.viewDayButton:hover {
+  border-color: #8f36e2;
+  background: #f7f0ff;
+}
+
+.viewDayButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.viewAllButton {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #8f36e2;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8a35df 0%, #9f4be7 100%);
+  color: white;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.viewAllButton:hover {
   filter: brightness(1.08);
 }
 
@@ -322,4 +472,5 @@
   .cardBody h3 {
     min-height: 0;
   }
+
 }

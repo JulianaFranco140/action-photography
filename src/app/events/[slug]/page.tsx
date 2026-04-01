@@ -5,14 +5,16 @@ import { notFound } from "next/navigation";
 
 type EventDetailsPageProps = {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ day?: string }>;
 };
 
 export function generateStaticParams() {
   return EVENTS.map((event) => ({ slug: event.slug }));
 }
 
-export default async function EventDetailsPage({ params }: EventDetailsPageProps) {
+export default async function EventDetailsPage({ params, searchParams }: EventDetailsPageProps) {
   const { slug } = await params;
+  const { day } = await searchParams;
   const event = getEventBySlug(slug);
 
   if (!event) {
@@ -28,7 +30,7 @@ export default async function EventDetailsPage({ params }: EventDetailsPageProps
           </Link>
           <h1>{event.name}</h1>
           <p>
-            {event.city} · {event.date} · {event.photos}
+            {event.city} · {day ?? event.date} · {event.photos}
           </p>
         </section>
 
