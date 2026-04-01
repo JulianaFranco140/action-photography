@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <SiteHeader active="inicio" />
+      <SiteHeader active="inicio" userName="Cliente Action" />
 
       <section className={styles.hero}>
         <div className={styles.container}>

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function EventsPage() {
   return (
     <div className={styles.page}>
-      <SiteHeader active="eventos" />
+      <SiteHeader active="eventos" userName="Cliente Action" />
 
       <main className={styles.container}>
         <section className={styles.marketIntro}>

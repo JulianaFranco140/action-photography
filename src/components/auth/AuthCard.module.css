@@ -22,14 +22,6 @@
   box-shadow: 0 30px 80px rgb(20 7 31 / 32%);
 }
 
-.authCardReversed .welcomePanel {
-  order: 2;
-}
-
-.authCardReversed .formPanel {
-  order: 1;
-}
-
 .welcomePanel {
   padding: 42px 44px;
   color: #fff;
