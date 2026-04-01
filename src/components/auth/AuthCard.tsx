@@ -22,21 +22,21 @@ export default function AuthCard({ mode }: AuthCardProps) {
           heroTitle: "Recupera tu acceso",
           heroDescription:
             "Te ayudamos a restablecer tu contrasena para que vuelvas a entrar a tus galerias en minutos.",
-          bullets: ["Proceso rapido y seguro", "Recibirás un correo de verificacion", "Recupera tus favoritos"],
+          bullets: ["Proceso rapido y seguro", "Recibiras un correo de verificacion", "Recupera tus favoritos"],
         }
       : isRecoverCode
         ? {
             heroTitle: "Confirma tu codigo",
             heroDescription:
-              "Ingresa el codigo de recuperacion que enviamos a tu correo para continuar con el restablecimiento.",
+              "Ingresa el codigo de recuperacion enviado a tu correo para continuar con el restablecimiento.",
             bullets: ["Codigo de 6 digitos", "Validez temporal por seguridad", "Paso previo para cambiar contrasena"],
           }
         : {
-            heroTitle: "Crea tu cuenta",
-            heroDescription:
-              "Registrate para acceder a eventos, encontrar tus fotos y recibir novedades de competencias.",
-            bullets: ["Perfil personalizado por equipo", "Alertas de nuevas galerias", "Favoritos y colecciones privadas"],
-          };
+        heroTitle: "Crea tu cuenta",
+        heroDescription:
+          "Registrate para acceder a eventos, encontrar tus fotos y recibir novedades de competencias.",
+        bullets: ["Perfil personalizado por equipo", "Alertas de nuevas galerias", "Favoritos y colecciones privadas"],
+      };
 
   return (
     <main className={styles.page}>
@@ -124,7 +124,7 @@ function RecoverForm() {
     <>
       <h2>Recuperar contraseña</h2>
       <p className={styles.formNote}>
-        Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.
+        Ingresa tu correo y te enviaremos un codigo para restablecer tu contraseña.
       </p>
 
       <form className={styles.form} action="/forgot-password/code" method="get">
@@ -140,19 +140,12 @@ function RecoverForm() {
 function RecoverCodeForm() {
   return (
     <>
-      <h2>Código de recuperación</h2>
-      <p className={styles.formNote}>Escribe el código de 6 dígitos que te enviamos al correo registrado.</p>
+      <h2>Codigo de recuperacion</h2>
+      <p className={styles.formNote}>Escribe el codigo de 6 digitos que enviamos a tu correo registrado.</p>
 
       <form className={styles.form}>
         <label htmlFor="recoverCode">Codigo</label>
-        <input
-          id="recoverCode"
-          type="text"
-          inputMode="numeric"
-          maxLength={6}
-          placeholder="000000"
-          required
-        />
+        <input id="recoverCode" type="text" inputMode="numeric" maxLength={6} placeholder="000000" required />
 
         <button type="submit">Validar codigo</button>
       </form>

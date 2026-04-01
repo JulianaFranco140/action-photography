@@ -1,0 +1,127 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(3 5 17 / 50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 60;
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: min(300px, 88vw);
+  background: #070b2a;
+  color: #fff;
+  border-right: 1px solid #1c2352;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+  z-index: 70;
+}
+
+.sidebarOpen {
+  transform: translateX(0);
+}
+
+.sidebarBrandWrap {
+  height: 58px;
+  border-bottom: 1px solid #1c2352;
+  padding: 0 14px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionLogo {
+  height: 30px;
+  width: auto;
+}
+
+.sidebarBrand {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  opacity: 0.72;
+  text-transform: uppercase;
+  padding: 10px 20px 4px;
+}
+
+.closeButton {
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgb(255 255 255 / 14%);
+  color: white;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: rgb(255 255 255 / 24%);
+}
+
+.nav {
+  padding: 14px 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.navItem {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  text-align: left;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background: rgb(124 58 237 / 26%);
+}
+
+.navItemActive {
+  background: linear-gradient(90deg, #6938ef 0%, #8b5cf6 100%);
+}
+
+.adminUser {
+  margin-top: auto;
+  border-top: 1px solid #1c2352;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.adminInitials {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background: linear-gradient(140deg, #7c3aed 0%, #8b5cf6 100%);
+}
+
+.adminName {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.adminMail {
+  font-size: 0.8rem;
+  opacity: 0.82;
+}

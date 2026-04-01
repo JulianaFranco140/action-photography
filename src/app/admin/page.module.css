@@ -1,0 +1,284 @@
+.page {
+	min-height: 100vh;
+	background: #f3f5fb;
+	color: #0f172a;
+	font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
+.main {
+	min-width: 0;
+}
+
+.topHeader {
+	height: 62px;
+	padding: 0 28px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-bottom: 1px solid #d8deea;
+	background: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.menuButton {
+	border: 1px solid #d8deea;
+	background: #fff;
+	border-radius: 10px;
+	width: 38px;
+	height: 38px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	cursor: pointer;
+}
+
+.menuButton span {
+	width: 16px;
+	height: 2px;
+	border-radius: 999px;
+	background: #44315d;
+}
+
+.content {
+	padding: 26px 28px 30px;
+}
+
+.content h1 {
+	font-size: 1.75rem;
+	font-weight: 700;
+	letter-spacing: -0.2px;
+	margin-bottom: 6px;
+}
+
+.subtitle {
+	color: #475569;
+	font-size: 0.93rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.metricsGrid {
+	margin-top: 18px;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.metricCard {
+	border-radius: 12px;
+	border: 1px solid #d7dce8;
+	background: #fff;
+	padding: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	box-shadow: 0 2px 8px rgb(15 23 42 / 6%);
+}
+
+.metricLabel {
+	color: #64748b;
+	font-size: 0.78rem;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+	margin-bottom: 6px;
+}
+
+.metricValue {
+	font-size: 1.55rem;
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: 6px;
+}
+
+.metricDelta {
+	color: #16a34a;
+	font-size: 0.78rem;
+	font-weight: 500;
+}
+
+.metricIcon {
+	width: 46px;
+	height: 46px;
+	border-radius: 10px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(140deg, #6938ef 0%, #8b5cf6 100%);
+	color: #fff;
+	font-size: 1.35rem;
+	font-weight: 700;
+}
+
+.topCustomersCard {
+	margin-top: 16px;
+	border-radius: 12px;
+	border: 1px solid #d7dce8;
+	background: #fff;
+	box-shadow: 0 2px 8px rgb(15 23 42 / 6%);
+	padding: 14px 16px;
+}
+
+.topCustomersHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 4px;
+}
+
+.topCustomersHeader h2 {
+	font-size: 1.12rem;
+	font-weight: 700;
+}
+
+.topCustomersHeader p {
+	color: #64748b;
+	font-size: 0.78rem;
+	font-weight: 500;
+}
+
+.customerList {
+	list-style: none;
+	display: grid;
+}
+
+.customerRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 10px 8px;
+	border-radius: 10px;
+}
+
+.customerRow:hover {
+	background: #f8f7ff;
+}
+
+.customerLeft {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.customerAvatar {
+	width: 34px;
+	height: 34px;
+	border-radius: 999px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	font-size: 0.78rem;
+	color: #fff;
+	background: linear-gradient(140deg, #7c3aed 0%, #8b5cf6 100%);
+}
+
+.customerName {
+	font-size: 0.93rem;
+	font-weight: 600;
+}
+
+.customerMeta {
+	color: #64748b;
+	font-size: 0.78rem;
+	font-weight: 500;
+}
+
+.customerRight {
+	text-align: right;
+}
+
+.customerAmount {
+	font-size: 0.92rem;
+	font-weight: 600;
+}
+
+.customerTotalLabel {
+	color: #64748b;
+	font-size: 0.74rem;
+	font-weight: 500;
+}
+
+.customerRank {
+	font-size: 1.02rem;
+	font-weight: 600;
+	color: #8b5cf6;
+}
+
+@media (width <= 1200px) {
+	.metricsGrid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.customerName {
+		font-size: 0.95rem;
+	}
+
+	.customerAmount {
+		font-size: 0.95rem;
+	}
+}
+
+@media (width <= 900px) {
+	.topHeader {
+		padding: 0 16px;
+	}
+}
+
+@media (width <= 680px) {
+	.topHeader {
+		height: 56px;
+		padding: 0 12px;
+	}
+
+	.menuButton {
+		width: 34px;
+		height: 34px;
+	}
+
+	.content {
+		padding: 18px 14px 24px;
+	}
+
+	.content h1 {
+		font-size: 1.45rem;
+	}
+
+	.subtitle {
+		font-size: 0.95rem;
+	}
+
+	.metricsGrid {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.topCustomersHeader {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.topCustomersHeader h2 {
+		font-size: 1.18rem;
+	}
+
+	.topCustomersCard {
+		padding: 14px;
+	}
+
+	.customerRow {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+	.customerRight {
+		text-align: left;
+	}
+}
