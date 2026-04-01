@@ -120,6 +120,13 @@
   margin-bottom: 14px;
 }
 
+.formNote {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #614878;
+  margin-bottom: 14px;
+}
+
 .homeLink {
   align-self: flex-start;
   text-decoration: none;
@@ -212,6 +219,17 @@
   font-weight: 700;
 }
 
+.inlineHelp {
+  margin-top: 12px;
+  font-size: 0.86rem;
+  color: #614878;
+}
+
+.inlineHelp a {
+  color: #6f2f9a;
+  font-weight: 700;
+}
+
 .checkRow {
   margin-top: 8px;
   display: inline-flex;
@@ -299,11 +317,20 @@
     font-size: 0.85rem;
   }
 
+  .formNote {
+    font-size: 0.84rem;
+    margin-bottom: 10px;
+  }
+
   .form {
     gap: 6px;
   }
 
   .form label {
+    font-size: 0.8rem;
+  }
+
+  .inlineHelp {
     font-size: 0.8rem;
   }
 
