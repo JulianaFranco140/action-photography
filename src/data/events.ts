@@ -54,7 +54,7 @@ export const EVENTS: EventItem[] = [
     city: "Cucuta",
     name: "Cheer Celebrity Poitiers",
     date: "08 Jul 2025",
-    days: ["08 Jul 2025", "09 Jul 2025", "10 Jul 2025"],
+    days: ["08 Jul 2025", "09 Jul 2025", "10 Jul 2025","11 Jul 2025"],
     image: "/event3.png",
     photos: "2,009 fotos",
     teams: [

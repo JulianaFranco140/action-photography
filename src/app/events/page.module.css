@@ -339,20 +339,13 @@
   font-size: 0.9rem;
 }
 
-.daySelectWrap {
+.dayButtons {
   margin-top: 12px;
+  display: grid;
+  gap: 8px;
 }
 
-.daySelectLabel {
-  display: block;
-  margin-bottom: 6px;
-  color: #5f558b;
-  font-size: 0.84rem;
-  font-weight: 600;
-}
-
-.daySelect {
-  width: 100%;
+.dayButton {
   border: 1px solid #d8c5f0;
   border-radius: 10px;
   background: #fff;
@@ -360,16 +353,28 @@
   padding: 9px 10px;
   font-size: 0.86rem;
   font-weight: 600;
-  outline: none;
+  cursor: pointer;
 }
 
-.daySelect:focus {
+.dayButton:hover {
   border-color: #8f36e2;
-  box-shadow: 0 0 0 2px rgb(143 54 226 / 15%);
+  background: #f7f0ff;
+}
+
+.dayButtonActive {
+  border-color: #8f36e2;
+  background: #f7f0ff;
+  box-shadow: inset 0 0 0 1px #8f36e2;
+}
+
+.modalActions {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
 
 .viewDayButton {
-  margin-top: 10px;
   width: 100%;
   border: 1px solid #d8c5f0;
   border-radius: 10px;
@@ -392,7 +397,6 @@
 }
 
 .viewAllButton {
-  margin-top: 10px;
   width: 100%;
   border: 1px solid #8f36e2;
   border-radius: 10px;

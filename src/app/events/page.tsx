@@ -110,6 +110,12 @@ export default function EventsPage() {
     setSelectedDay(event.days[0] ?? "");
   };
 
+  const getDaysGridColumns = (totalDays: number) => {
+    if (totalDays <= 1) return 1;
+    if (totalDays <= 3) return totalDays;
+    return 2;
+  };
+
   return (
     <div className={styles.page}>
       <SiteHeader active="eventos" />
@@ -194,46 +200,50 @@ export default function EventsPage() {
           <>
             <div className={styles.dateModalHeader}>
               <h3>{selectedEvent.name}</h3>
-              <button type="button" onClick={() => setSelectedEvent(null)} aria-label="Cerrar selector de fecha">
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedEvent(null);
+                  setSelectedDay("");
+                }}
+                aria-label="Cerrar selector de fecha"
+              >
                 x
               </button>
             </div>
 
             <p className={styles.dateModalText}>Selecciona el dia que deseas ver o entra a la galeria completa.</p>
 
-            <div className={styles.daySelectWrap}>
-              <label htmlFor="event-day" className={styles.daySelectLabel}>
-                Dia del evento
-              </label>
-              <select
-                id="event-day"
-                className={styles.daySelect}
-                value={selectedDay}
-                onChange={(e) => setSelectedDay(e.target.value)}
-              >
-                <option value="" disabled>
-                  Selecciona un dia
-                </option>
-                {selectedEvent.days.map((day) => (
-                  <option key={day} value={day}>
-                    {day}
-                  </option>
-                ))}
-              </select>
+            <div
+              className={styles.dayButtons}
+              style={{ gridTemplateColumns: `repeat(${getDaysGridColumns(selectedEvent.days.length)}, minmax(0, 1fr))` }}
+            >
+              {selectedEvent.days.map((day) => (
+                <button
+                  key={day}
+                  type="button"
+                  className={`${styles.dayButton} ${selectedDay === day ? styles.dayButtonActive : ""}`}
+                  onClick={() => setSelectedDay(day)}
+                >
+                  {day}
+                </button>
+              ))}
             </div>
 
-            <button
-              type="button"
-              className={styles.viewDayButton}
-              onClick={() => selectedDay && goToEvent(selectedEvent, selectedDay)}
-              disabled={!selectedDay}
-            >
-              Ver dia seleccionado
-            </button>
+            <div className={styles.modalActions}>
+              <button
+                type="button"
+                className={styles.viewDayButton}
+                onClick={() => selectedDay && goToEvent(selectedEvent, selectedDay)}
+                disabled={!selectedDay}
+              >
+                Ver dia seleccionado
+              </button>
 
-            <button type="button" className={styles.viewAllButton} onClick={() => goToEvent(selectedEvent)}>
-              Ver todos los dias
-            </button>
+              <button type="button" className={styles.viewAllButton} onClick={() => goToEvent(selectedEvent)}>
+                Ver todos los dias
+              </button>
+            </div>
           </>
         ) : null}
       </section>
