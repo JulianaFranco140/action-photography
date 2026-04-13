@@ -1,16 +1,24 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./AdminSidebar.module.css";
+
+export type AdminNavItem = {
+  label: string;
+  href?: string;
+};
 
 type AdminSidebarProps = {
   isOpen: boolean;
   onClose: () => void;
-  items: string[];
+  items: Array<AdminNavItem | string>;
   activeItem?: string;
 };
 
 export default function AdminSidebar({ isOpen, onClose, items, activeItem = "Dashboard" }: AdminSidebarProps) {
+  const pathname = usePathname();
+
   useEffect(() => {
     if (!isOpen) {
       return;
@@ -28,9 +36,14 @@ export default function AdminSidebar({ isOpen, onClose, items, activeItem = "Das
 
   return (
     <>
-      <div className={`${styles.overlay} ${isOpen ? styles.overlayVisible : ""}`} onClick={onClose} />
+      <button
+        type="button"
+        className={`${styles.overlay} ${isOpen ? styles.overlayVisible : ""}`}
+        onClick={onClose}
+        aria-label="Cerrar menu admin"
+      />
 
-      <aside className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : ""}`} aria-hidden={!isOpen}>
+      <aside className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : ""}`}>
         <div className={styles.sidebarBrandWrap}>
           <img src="/Logo Action Blanco.svg" alt="Action Photography" className={styles.actionLogo} />
           <button type="button" onClick={onClose} className={styles.closeButton} aria-label="Cerrar menu admin">
@@ -41,15 +54,32 @@ export default function AdminSidebar({ isOpen, onClose, items, activeItem = "Das
         <p className={styles.sidebarBrand}>Admin Panel</p>
 
         <nav className={styles.nav}>
-          {items.map((item) => (
-            <button
-              key={item}
-              type="button"
-              className={`${styles.navItem} ${item === activeItem ? styles.navItemActive : ""}`}
-            >
-              {item}
-            </button>
-          ))}
+          {items.map((item, index) => {
+            const normalizedItem = typeof item === "string" ? { label: item } : item;
+            const itemKey = `${normalizedItem.label}-${index}`;
+            const isActive =
+              normalizedItem.label === activeItem ||
+              (typeof normalizedItem.href === "string" && pathname === normalizedItem.href);
+
+            return normalizedItem.href ? (
+              <a
+                key={itemKey}
+                href={normalizedItem.href}
+                className={`${styles.navItem} ${isActive ? styles.navItemActive : ""}`}
+                onClick={onClose}
+              >
+                {normalizedItem.label}
+              </a>
+            ) : (
+              <button
+                key={itemKey}
+                type="button"
+                className={`${styles.navItem} ${isActive ? styles.navItemActive : ""}`}
+              >
+                {normalizedItem.label}
+              </button>
+            );
+          })}
         </nav>
 
         <div className={styles.adminUser}>

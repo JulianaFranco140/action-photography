@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./page.module.css";
-import AdminSidebar from "@/components/admin/AdminSidebar";
+import AdminSidebar, { type AdminNavItem } from "@/components/admin/AdminSidebar";
 
 type Metric = { label: string; value: string; delta: string };
 type Alert = { label: string; value: string; tone: "warning" | "hot" | "down" };
@@ -41,7 +41,14 @@ const eventRevenue: EventRevenue[] = [
 	{ event: "Summer Spirit Open", amount: 58800 },
 ];
 
-const navItems = ["Inicio", "Ordenes", "Productos", "Clientes", "Reportes", "Configuracion"];
+const navItems: AdminNavItem[] = [
+	{ label: "Inicio", href: "/admin" },
+	{ label: "Ordenes", href: "/admin/orders" },
+	{ label: "Productos" },
+	{ label: "Clientes" },
+	{ label: "Reportes" },
+	{ label: "Configuracion" },
+];
 
 export default function AdminDashboardPage() {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -53,7 +60,7 @@ export default function AdminDashboardPage() {
 				isOpen={isSidebarOpen}
 				onClose={() => setIsSidebarOpen(false)}
 				items={navItems}
-				activeItem="Dashboard"
+				activeItem="Inicio"
 			/>
 
 			
