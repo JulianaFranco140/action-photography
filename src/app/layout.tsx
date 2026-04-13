@@ -16,7 +16,14 @@ export const metadata: Metadata = {
   title: "Action Photography",
   description: "Action Photography",
   icons: {
-    icon: "/Action Personaje.svg",
+    icon: [
+      { url: "/Action A Negro.svg", media: "(prefers-color-scheme: light)", type: "image/svg+xml" },
+      { url: "/Action A Blanco.svg", media: "(prefers-color-scheme: dark)", type: "image/svg+xml" },
+    ],
+    shortcut: [
+      { url: "/Action A Negro.svg", media: "(prefers-color-scheme: light)", type: "image/svg+xml" },
+      { url: "/Action A Blanco.svg", media: "(prefers-color-scheme: dark)", type: "image/svg+xml" },
+    ],
   },
 };
 
