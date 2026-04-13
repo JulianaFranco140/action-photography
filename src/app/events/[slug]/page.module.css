@@ -12,12 +12,24 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 34px 20px 54px;
+  padding: 28px 20px 54px;
 }
 
 .top {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgb(255 255 255 / 16%) 0%, rgb(255 255 255 / 6%) 100%);
+  backdrop-filter: blur(10px);
+  padding: 18px;
+}
+
+.topHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .backLink {
@@ -36,16 +48,120 @@
 .top h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.06;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
-.top p {
-  font-size: 0.96rem;
+.dayBadgeWrap {
+  min-width: 210px;
+  border: 1px solid rgb(255 255 255 / 34%);
+  border-radius: 14px;
+  background: rgb(15 7 24 / 26%);
+  padding: 10px 12px;
+  text-align: right;
+}
+
+.dayBadgeLabel {
+  font-size: 0.72rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.dayBadgeValue {
+  margin-top: 4px;
+  font-size: 0.97rem;
+  font-weight: 700;
+}
+
+.metaRow {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.metaRow span {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 9%);
+  padding: 7px 11px;
+  font-size: 0.82rem;
+}
+
+.searchForm {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchInput {
+  flex: 1 1 auto;
+  min-width: 220px;
+  border: 1px solid rgb(255 255 255 / 34%);
+  border-radius: 12px;
+  background: rgb(15 7 24 / 24%);
+  color: #fff;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: rgb(255 255 255 / 70%);
+}
+
+.searchInput:focus {
+  border-color: rgb(255 255 255 / 64%);
+}
+
+.searchButton,
+.clearSearch {
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.searchButton {
+  border: 1px solid white;
+  background: white;
+  color: #3f1458;
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+.clearSearch {
+  border: 1px solid rgb(255 255 255 / 50%);
+  background: rgb(255 255 255 / 8%);
+  color: #fff;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.searchCount {
+  margin-top: 10px;
+  font-size: 0.86rem;
   opacity: 0.9;
 }
 
+.emptyState {
+  border: 1px dashed rgb(255 255 255 / 46%);
+  border-radius: 14px;
+  background: rgb(15 7 24 / 20%);
+  padding: 20px;
+  text-align: center;
+  color: rgb(255 255 255 / 92%);
+}
+
 .listWrap {
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
 .teamList {
@@ -53,25 +169,26 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .teamRow {
   border: 1px solid rgb(255 255 255 / 18%);
   border-radius: 16px;
-  padding: 14px 16px;
+  padding: 16px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 14px;
   background: linear-gradient(130deg, rgb(255 255 255 / 12%) 0%, rgb(255 255 255 / 4%) 100%);
   backdrop-filter: blur(8px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .teamRow:hover {
-  transform: translateX(-8px);
-  box-shadow: 16px 10px 30px rgb(0 0 0 / 25%);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgb(0 0 0 / 24%);
 }
 
 .mainInfo {
@@ -89,27 +206,44 @@
   opacity: 0.86;
 }
 
-.actionButton {
+.teamMetaRow {
+  margin-top: 8px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.teamMetaRow span {
+  border: 1px solid rgb(255 255 255 / 30%);
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  opacity: 0.92;
+  background: rgb(255 255 255 / 6%);
+}
+
+.actionButton {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  min-width: 108px;
+  height: 42px;
   border: 1px solid white;
-  border-radius: 999px;
-  background: transparent;
+  border-radius: 12px;
+  background: rgb(255 255 255 / 10%);
   color: white;
-  font-size: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .teamRow:hover .actionButton {
   background-color: white;
   color: #3f1458;
-  transform: scale(1.1);
+  transform: translateY(-1px);
 }
 
 @media (width <= 900px) {
@@ -119,6 +253,31 @@
 
   .top {
     margin-bottom: 14px;
+    border-radius: 16px;
+    padding: 14px;
+  }
+
+  .topHead {
+    flex-direction: column;
+  }
+
+  .dayBadgeWrap {
+    min-width: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .searchForm {
+    flex-wrap: wrap;
+  }
+
+  .searchInput {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .teamList {
+    grid-template-columns: 1fr;
   }
 
   .teamRow {
@@ -138,14 +297,10 @@
     align-items: flex-start;
   }
 
-  .teamMeta {
-    line-height: 1.3;
-  }
-
   .actionButton {
     align-self: flex-end;
-    width: 40px;
+    min-width: 106px;
     height: 40px;
-    font-size: 18px;
+    font-size: 0.86rem;
   }
 }
