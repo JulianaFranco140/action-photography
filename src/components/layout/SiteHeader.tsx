@@ -45,7 +45,7 @@ export default function SiteHeader({ active = "inicio" }: SiteHeaderProps) {
         <div className={styles.rightControls}>
           <div className={styles.authActions}>
             <Link href="/login" className={styles.loginButton}>
-              Iniciar sesion
+              Iniciar sesión
             </Link>
             <Link href="/register" className={styles.registerButton}>
               Registrarme

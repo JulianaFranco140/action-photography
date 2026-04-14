@@ -22,6 +22,62 @@
   box-shadow: 0 30px 80px rgb(20 7 31 / 32%);
 }
 
+@keyframes welcomeMoveToLeft {
+  from {
+    opacity: 0.9;
+    transform: translateX(12%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes welcomeMoveToRight {
+  from {
+    opacity: 0.9;
+    transform: translateX(-12%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes formMoveToLeft {
+  from {
+    opacity: 0.9;
+    transform: translateX(34%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes formMoveToRight {
+  from {
+    opacity: 0.9;
+    transform: translateX(-34%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.registerLayout .welcomePanel {
+  order: 2;
+}
+
+.registerLayout .formPanel {
+  order: 1;
+}
+
 .welcomePanel {
   padding: 42px 44px;
   color: #fff;
@@ -29,6 +85,22 @@
     linear-gradient(160deg, rgb(206 122 255 / 98%) 0%, rgb(152 51 210 / 94%) 45%, rgb(63 20 88 / 98%) 100%);
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+.welcomeMoveToLeft {
+  animation: welcomeMoveToLeft 0.64s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.welcomeMoveToRight {
+  animation: welcomeMoveToRight 0.64s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.formMoveToLeft {
+  animation: formMoveToLeft 0.76s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.formMoveToRight {
+  animation: formMoveToRight 0.76s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .welcomeTop {
@@ -113,6 +185,7 @@
   flex-direction: column;
   justify-content: center;
   color: #2a1f33;
+  animation-delay: 0.05s;
 }
 
 .formPanel h2 {
@@ -284,6 +357,11 @@
     min-height: auto;
   }
 
+  .registerLayout .welcomePanel,
+  .registerLayout .formPanel {
+    order: initial;
+  }
+
   .brandLogo {
     width: 190px;
   }
@@ -348,5 +426,19 @@
   .homeText {
     opacity: 1;
     transform: translateX(0);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcomeMoveToLeft,
+  .welcomeMoveToRight,
+  .formMoveToLeft,
+  .formMoveToRight {
+    animation: none;
+  }
+
+  .formPanel {
+    animation-delay: 0s;
   }
 }

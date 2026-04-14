@@ -12,6 +12,10 @@ export default function AuthCard({ mode }: AuthCardProps) {
   const isRegister = mode === "register";
   const isRecover = mode === "recover";
   const isRecoverCode = mode === "recover-code";
+  const welcomePanelClass = `${styles.welcomePanel} ${
+    isRegister ? styles.welcomeMoveToRight : styles.welcomeMoveToLeft
+  }`;
+  const formPanelClass = `${styles.formPanel} ${isRegister ? styles.formMoveToLeft : styles.formMoveToRight}`;
   const content = isLogin
     ? {
         heroTitle: "Bienvenida de nuevo",
@@ -41,8 +45,8 @@ export default function AuthCard({ mode }: AuthCardProps) {
 
   return (
     <main className={styles.page}>
-      <section className={`${styles.authCard} ${isRegister ? styles.authCardReversed : ""}`}>
-        <div className={styles.welcomePanel}>
+      <section className={`${styles.authCard} ${isRegister ? styles.registerLayout : ""}`}>
+        <div className={welcomePanelClass}>
           <div className={styles.welcomeTop}>
             <img className={styles.brandLogo} src="/Logo Action Blanco.svg" alt="Logo Action Photography" />
             <p className={styles.kicker}>Action Photography</p>
@@ -75,7 +79,7 @@ export default function AuthCard({ mode }: AuthCardProps) {
           </p>
         </div>
 
-        <div className={styles.formPanel}>
+        <div className={formPanelClass}>
           <Link href="/" className={styles.homeLink} aria-label="Volver al inicio" title="Inicio">
             <span className={styles.homeIcon}>←</span>
             <span className={styles.homeText}>Inicio</span>
@@ -98,9 +102,9 @@ export default function AuthCard({ mode }: AuthCardProps) {
 function LoginForm() {
   return (
     <>
-      <h2>Iniciar sesion</h2>
-      <form className={styles.form}>
-        <label htmlFor="email">Correo electronico</label>
+      <h2>Iniciar sesión</h2>
+      <form className={styles.form} action="/admin" method="get">
+        <label htmlFor="email">Correo electrónico</label>
         <input id="email" type="email" placeholder="tu@email.com" required />
 
         <label htmlFor="password">Contrasena</label>
@@ -125,11 +129,11 @@ function RecoverForm() {
     <>
       <h2>Recuperar contraseña</h2>
       <p className={styles.formNote}>
-        Ingresa tu correo y te enviaremos un codigo para restablecer tu contraseña.
+        Ingresa tu correo y te enviaremos un código para restablecer tu contraseña.
       </p>
 
       <form className={styles.form} action="/forgot-password/code" method="get">
-        <label htmlFor="recoverEmail">Correo electronico</label>
+        <label htmlFor="recoverEmail">Correo electrónico</label>
         <input id="recoverEmail" name="email" type="email" placeholder="tu@email.com" required />
 
         <button type="submit">Continuar</button>
@@ -141,14 +145,14 @@ function RecoverForm() {
 function RecoverCodeForm() {
   return (
     <>
-      <h2>Codigo de recuperacion</h2>
-      <p className={styles.formNote}>Escribe el codigo de 6 digitos que enviamos a tu correo registrado.</p>
+      <h2>Código de recuperacion</h2>
+      <p className={styles.formNote}>Escribe el código de 6 digitos que enviamos a tu correo registrado.</p>
 
       <form className={styles.form}>
         <label htmlFor="recoverCode">Codigo</label>
         <input id="recoverCode" type="text" inputMode="numeric" maxLength={6} placeholder="000000" required />
 
-        <button type="submit">Validar codigo</button>
+        <button type="submit">Validar código</button>
       </form>
 
       <p className={styles.inlineHelp}>
@@ -166,7 +170,7 @@ function RegisterForm() {
         <label htmlFor="fullName">Nombre completo</label>
         <input id="fullName" type="text" placeholder="Tu nombre" required />
 
-        <label htmlFor="registerEmail">Correo electronico</label>
+        <label htmlFor="registerEmail">Correo electrónico</label>
         <input id="registerEmail" type="email" placeholder="tu@email.com" required />
 
         <label htmlFor="team">Equipo (opcional)</label>

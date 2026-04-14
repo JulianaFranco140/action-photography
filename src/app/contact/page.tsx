@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export default function ContactPage() {
   return (
     <div className={styles.page}>
-      <SiteHeader active="contacto" userName="Cliente Action" />
+      <SiteHeader active="contacto" />
 
       <main className={styles.container}>
         <section className={styles.hero}>

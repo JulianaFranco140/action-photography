@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <SiteHeader active="inicio" userName="Cliente Action" />
+      <SiteHeader active="inicio" />
 
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -65,10 +65,10 @@ export default function Home() {
               </div>
             </div>
 
-            <Link href="/events" className={styles.exploreCard}>
+            <div className={styles.exploreCard}>
               <p>Sigue explorando más eventos</p>
-              <span className={styles.arrowButton}>→</span>
-            </Link>
+              <button className={styles.arrowButton}>→</button>
+            </div>
           </div>
         </div>
       </section>
@@ -84,4 +84,3 @@ export default function Home() {
     </div>
   );
 }
-

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import styles from "./AdminSidebar.module.css";
 
 export type AdminNavItem = {
@@ -18,6 +18,22 @@ type AdminSidebarProps = {
 
 export default function AdminSidebar({ isOpen, onClose, items, activeItem = "Dashboard" }: AdminSidebarProps) {
   const pathname = usePathname();
+  const router = useRouter();
+  const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
+
+  const handleOpenLogoutModal = () => {
+    setIsLogoutModalOpen(true);
+  };
+
+  const handleCancelLogout = () => {
+    setIsLogoutModalOpen(false);
+  };
+
+  const handleConfirmLogout = () => {
+    setIsLogoutModalOpen(false);
+    onClose();
+    router.push("/");
+  };
 
   useEffect(() => {
     if (!isOpen) {
@@ -26,13 +42,18 @@ export default function AdminSidebar({ isOpen, onClose, items, activeItem = "Das
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        if (isLogoutModalOpen) {
+          setIsLogoutModalOpen(false);
+          return;
+        }
+
         onClose();
       }
     };
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [isOpen, onClose]);
+  }, [isOpen, isLogoutModalOpen, onClose]);
 
   return (
     <>
@@ -82,14 +103,39 @@ export default function AdminSidebar({ isOpen, onClose, items, activeItem = "Das
           })}
         </nav>
 
-        <div className={styles.adminUser}>
-          <span className={styles.adminInitials}>AD</span>
-          <div>
-            <p className={styles.adminName}>Admin User</p>
-            <p className={styles.adminMail}>admin@example.com</p>
+        <div className={styles.sidebarBottom}>
+          <div className={styles.adminUser}>
+            <span className={styles.adminInitials}>AD</span>
+            <div>
+              <p className={styles.adminName}>Admin User</p>
+              <p className={styles.adminMail}>admin@example.com</p>
+            </div>
           </div>
+
+          <button type="button" className={styles.logoutButton} onClick={handleOpenLogoutModal}>
+            Cerrar sesión
+          </button>
         </div>
       </aside>
+
+      {isLogoutModalOpen ? (
+        <div className={styles.modalBackdrop} role="dialog" aria-modal="true" aria-labelledby="logout-modal-title">
+          <div className={styles.modalCard}>
+            <h3 id="logout-modal-title" className={styles.modalTitle}>
+              Confirmar cierre de sesión
+            </h3>
+            <p className={styles.modalText}>¿Seguro que quieres cerrar sesion y volver al inicio?</p>
+            <div className={styles.modalActions}>
+              <button type="button" className={styles.modalCancelButton} onClick={handleCancelLogout}>
+                Cancelar
+              </button>
+              <button type="button" className={styles.modalConfirmButton} onClick={handleConfirmLogout}>
+                Cerrar sesión
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </>
   );
 }
