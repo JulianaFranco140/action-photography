@@ -1,0 +1,308 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 14% -12%, rgb(139 92 246 / 20%), transparent 44%),
+    radial-gradient(circle at 88% 10%, rgb(124 58 237 / 14%), transparent 34%),
+    #f3f5fb;
+  color: #0f172a;
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
+.main {
+  min-width: 0;
+}
+
+.content {
+  padding: 26px 28px 30px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.sidebarIconButton {
+  margin-top: 2px;
+  border: 1px solid #c4b5fd;
+  background: linear-gradient(180deg, #fff 0%, #f8f5ff 100%);
+  color: #5b21b6;
+  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 6px 14px rgb(124 58 237 / 16%);
+}
+
+.sidebarIconButton:hover {
+  background: #f3ecff;
+}
+
+.content h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+
+.subtitle {
+  color: #475569;
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.metricsGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metricCard {
+  border-radius: 12px;
+  border: 1px solid #ddd6fe;
+  background: linear-gradient(180deg, #fff 0%, #fcfbff 100%);
+  padding: 14px;
+  display: grid;
+  gap: 6px;
+  box-shadow: 0 8px 18px rgb(124 58 237 / 10%);
+}
+
+.metricLabel {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.metricValue {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #0f172a;
+}
+
+.metricDelta {
+  color: #16a34a;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.sectionHeader {
+  margin-top: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sectionHeader h2 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.alertsAndRevenueSection {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 14px;
+}
+
+.alertsCard,
+.eventsRevenueCard,
+.operationsCard {
+  border-radius: 12px;
+  border: 1px solid #ddd6fe;
+  background: linear-gradient(180deg, #fff 0%, #fdfbff 100%);
+  box-shadow: 0 8px 18px rgb(124 58 237 / 9%);
+  padding: 14px 16px;
+}
+
+.alertsCard {
+  padding: 12px 13px;
+}
+
+.alertList {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.alertRow {
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.82rem;
+  border: 1px solid #e2e8f0;
+}
+
+.tone_warning {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.tone_hot {
+  background: #ecfdf5;
+  border-color: #86efac;
+}
+
+.tone_down {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.revenueList {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.revenueRow {
+  display: grid;
+  gap: 6px;
+}
+
+.revenueTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.84rem;
+}
+
+.revenueTop span {
+  color: #334155;
+  font-weight: 500;
+}
+
+.revenueTop strong {
+  color: #0f172a;
+  font-size: 0.82rem;
+}
+
+.revenueTrack {
+  height: 8px;
+  border-radius: 999px;
+  background: #ede9fe;
+  overflow: hidden;
+}
+
+.revenueFill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%);
+}
+
+.operationsCard {
+  margin-top: 16px;
+}
+
+.opsGrid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.opCard {
+  border-radius: 10px;
+  border: 1px solid #ddd6fe;
+  background: #f5f3ff;
+  padding: 12px;
+  display: grid;
+  gap: 4px;
+}
+
+.rankingsGrid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.rankingCard {
+  border-radius: 12px;
+  border: 1px solid #ddd6fe;
+  background: linear-gradient(180deg, #fff 0%, #fcfbff 100%);
+  box-shadow: 0 8px 18px rgb(124 58 237 / 9%);
+  padding: 14px 16px;
+}
+
+.rankingCard h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.rankingCard ol {
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  color: #334155;
+  font-size: 0.87rem;
+}
+
+@media (width <= 1200px) {
+  .metricsGrid,
+  .opsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .alertsAndRevenueSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 680px) {
+  .content {
+    padding: 18px 14px 24px;
+  }
+
+  .titleRow {
+    gap: 10px;
+  }
+
+  .sidebarIconButton {
+    width: 34px;
+    height: 34px;
+  }
+
+  .content h1 {
+    font-size: 1.45rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .metricsGrid,
+  .opsGrid,
+  .rankingsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .alertRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

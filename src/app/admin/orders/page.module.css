@@ -1,0 +1,469 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% -12%, rgb(139 92 246 / 20%), transparent 44%),
+    radial-gradient(circle at 88% 8%, rgb(124 58 237 / 14%), transparent 34%),
+    #f3f5fb;
+  color: #0f172a;
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
+.main {
+  min-width: 0;
+}
+
+.content {
+  padding: 26px 28px 30px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.sidebarIconButton {
+  margin-top: 2px;
+  border: 1px solid #c4b5fd;
+  background: linear-gradient(180deg, #fff 0%, #f8f5ff 100%);
+  color: #5b21b6;
+  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 6px 14px rgb(124 58 237 / 16%);
+}
+
+.sidebarIconButton:hover {
+  background: #f3ecff;
+}
+
+.content h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+
+.subtitle {
+  color: #475569;
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.summaryGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.summaryCard {
+  border-radius: 12px;
+  border: 1px solid #ddd6fe;
+  background: linear-gradient(180deg, #fff 0%, #fcfbff 100%);
+  padding: 14px;
+  box-shadow: 0 8px 18px rgb(124 58 237 / 10%);
+  display: grid;
+  gap: 4px;
+}
+
+.summaryCard p {
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.summaryCard strong {
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.panelCard {
+  margin-top: 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd6fe;
+  background: linear-gradient(180deg, #fff 0%, #fdfbff 100%);
+  box-shadow: 0 8px 18px rgb(124 58 237 / 9%);
+  padding: 14px 16px;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.panelHeader h2,
+.panelCard h2 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filterChip {
+  border: 1px solid #d8b4fe;
+  border-radius: 999px;
+  background: #faf5ff;
+  color: #5b21b6;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.filterChipActive {
+  border-color: #8b5cf6;
+  color: #5b21b6;
+  background: #f5f3ff;
+}
+
+.tableWrap {
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+.ordersTable th,
+.ordersTable td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.ordersTable th {
+  color: #334155;
+  font-weight: 600;
+}
+
+.selectedOrderRow {
+  background: #ede9fe;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.status_Pagada {
+  background: #ecfdf5;
+  color: #166534;
+}
+
+.status_Pendiente {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.status_En_revision {
+  background: #f5f3ff;
+  color: #6d28d9;
+}
+
+.status_Reembolsada {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.trackButton {
+  border: 1px solid #c4b5fd;
+  border-radius: 8px;
+  background: #faf5ff;
+  color: #5b21b6;
+  padding: 5px 9px;
+  font-size: 0.77rem;
+  cursor: pointer;
+}
+
+.trackButton:hover {
+  background: #f3ecff;
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.pendingList {
+  margin-top: 12px;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.pendingRow {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.pendingRow p {
+  font-weight: 600;
+  font-size: 0.86rem;
+}
+
+.pendingRow span {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.pendingRow strong {
+  color: #9a3412;
+  font-size: 0.8rem;
+}
+
+.trackOrderMeta {
+  margin-top: 10px;
+  color: #475569;
+  font-size: 0.82rem;
+}
+
+.trackOrderMetaSecondary {
+  margin-top: 4px;
+  color: #334155;
+  font-size: 0.8rem;
+}
+
+.timeline {
+  list-style: none;
+  margin-top: 2px;
+  display: grid;
+  gap: 7px;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 8px;
+  border: 1px solid #ece7ff;
+  border-radius: 10px;
+  padding: 7px 8px;
+  background: #fcfbff;
+}
+
+.dot {
+  margin-top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 2px solid #94a3b8;
+  background: #fff;
+}
+
+.dotDone {
+  border-color: #16a34a;
+  background: #22c55e;
+}
+
+.timelineItem p {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.timelineItem small {
+  color: #64748b;
+  font-size: 0.72rem;
+}
+
+.emptyState {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.topProductsList {
+  margin-top: 12px;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.topProductRow {
+  border: 1px solid #ddd6fe;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.topProductRow p {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.topProductRow span {
+  color: #64748b;
+  font-size: 0.78rem;
+}
+
+.topProductRow strong {
+  font-size: 0.8rem;
+  color: #0f172a;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modalBackdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: rgb(3 5 17 / 62%);
+}
+
+.modalCard {
+  position: relative;
+  width: min(680px, 96vw);
+  max-height: 92vh;
+  overflow: auto;
+  border-radius: 14px;
+  border: 1px solid #d8b4fe;
+  background: linear-gradient(180deg, #fff 0%, #fcf9ff 100%);
+  box-shadow: 0 20px 44px rgb(76 29 149 / 28%);
+  padding: 12px;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.modalHeader h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.modalSummarySection,
+.modalTimelineSection {
+  margin-top: 10px;
+  border: 1px solid #e9e5ff;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+}
+
+.modalSectionTitle {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6d28d9;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.modalInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.modalInfoItem {
+  border: 1px solid #ede9fe;
+  border-radius: 10px;
+  padding: 7px 8px;
+  background: #faf9ff;
+  display: grid;
+  gap: 1px;
+}
+
+.modalInfoItem span {
+  color: #6b7280;
+  font-size: 0.69rem;
+}
+
+.modalInfoItem strong {
+  color: #111827;
+  font-size: 0.78rem;
+}
+
+.modalCloseButton {
+  border: 1px solid #c4b5fd;
+  border-radius: 8px;
+  background: #faf5ff;
+  color: #5b21b6;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.modalCloseButton:hover {
+  background: #f3ecff;
+}
+
+@media (width <= 1200px) {
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 680px) {
+  .content {
+    padding: 18px 14px 24px;
+  }
+
+  .titleRow {
+    gap: 10px;
+  }
+
+  .sidebarIconButton {
+    width: 34px;
+    height: 34px;
+  }
+
+  .content h1 {
+    font-size: 1.45rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .modalInfoGrid {
+    grid-template-columns: 1fr;
+  }
+}

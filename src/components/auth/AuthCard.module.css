@@ -1,0 +1,444 @@
+.page {
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 16px;
+  background:
+    radial-gradient(circle at -5% 95%, #3f1458 10%, transparent 40%),
+    radial-gradient(circle at 120% 10%, #3f1458 15%, transparent 15%),
+    radial-gradient(circle at 100% 100%, #3f1458 15%, transparent 40%),
+    #882bbe;
+}
+
+.authCard {
+  width: min(1040px, 100%);
+  height: min(640px, calc(100dvh - 32px));
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  box-shadow: 0 30px 80px rgb(20 7 31 / 32%);
+}
+
+@keyframes welcomeMoveToLeft {
+  from {
+    opacity: 0.9;
+    transform: translateX(12%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes welcomeMoveToRight {
+  from {
+    opacity: 0.9;
+    transform: translateX(-12%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes formMoveToLeft {
+  from {
+    opacity: 0.9;
+    transform: translateX(34%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes formMoveToRight {
+  from {
+    opacity: 0.9;
+    transform: translateX(-34%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.registerLayout .welcomePanel {
+  order: 2;
+}
+
+.registerLayout .formPanel {
+  order: 1;
+}
+
+.welcomePanel {
+  padding: 42px 44px;
+  color: #fff;
+  background:
+    linear-gradient(160deg, rgb(206 122 255 / 98%) 0%, rgb(152 51 210 / 94%) 45%, rgb(63 20 88 / 98%) 100%);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.welcomeMoveToLeft {
+  animation: welcomeMoveToLeft 0.64s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.welcomeMoveToRight {
+  animation: welcomeMoveToRight 0.64s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.formMoveToLeft {
+  animation: formMoveToLeft 0.76s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.formMoveToRight {
+  animation: formMoveToRight 0.76s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.welcomeTop {
+  min-height: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcomeBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brandLogo {
+  width: 210px;
+  max-width: 88%;
+  margin: 0 auto 14px;
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 14px;
+}
+
+.welcomePanel h1 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+
+.description {
+  font-size: 0.96rem;
+  line-height: 1.55;
+  opacity: 0.95;
+  max-width: 40ch;
+}
+
+.bullets {
+  list-style: none;
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.92rem;
+}
+
+.bullets li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.9;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.switchText {
+  margin-top: 20px;
+  font-size: 0.92rem;
+}
+
+.switchText a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.formPanel {
+  padding: 42px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2a1f33;
+  animation-delay: 0.05s;
+}
+
+.formPanel h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.formNote {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #614878;
+  margin-bottom: 14px;
+}
+
+.homeLink {
+  align-self: flex-start;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #6f2f9a 0%, #9833d2 100%);
+  border-radius: 999px;
+  height: 38px;
+  width: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  overflow: hidden;
+  font-weight: 700;
+  margin-bottom: 12px;
+  transition: width 0.3s ease, box-shadow 0.25s ease;
+}
+
+.homeLink:hover {
+  width: 110px;
+  box-shadow: 0 10px 20px rgb(88 25 123 / 35%);
+}
+
+.homeIcon {
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.homeText {
+  font-size: 0.86rem;
+  opacity: 0;
+  transform: translateX(6px);
+  white-space: nowrap;
+  transition: opacity 0.2s ease, transform 0.25s ease;
+}
+
+.homeLink:hover .homeText {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.form {
+  color-scheme: light;
+  display: grid;
+  gap: 8px;
+}
+
+.form label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #503867;
+  margin-top: 2px;
+}
+
+.form input {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddc9ed;
+  border-radius: 12px;
+  padding: 11px 12px;
+  font-size: 0.9rem;
+  color: #2a1f33;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form input::placeholder {
+  color: #9b9b9b;
+  opacity: 1;
+}
+
+.form input:focus {
+  border-color: #9833d2;
+  box-shadow: 0 0 0 4px rgb(152 51 210 / 14%);
+}
+
+.formOptions {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: #614878;
+}
+
+.formOptions a {
+  color: #6f2f9a;
+  font-weight: 700;
+}
+
+.inlineHelp {
+  margin-top: 12px;
+  font-size: 0.86rem;
+  color: #614878;
+}
+
+.inlineHelp a {
+  color: #6f2f9a;
+  font-weight: 700;
+}
+
+.checkRow {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #614878;
+}
+
+.checkRow input {
+  width: 16px;
+  height: 16px;
+}
+
+.form button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6f2f9a 0%, #9833d2 100%);
+  color: #fff;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgb(88 25 123 / 36%);
+}
+
+@media (width <= 950px) {
+  .page {
+    height: auto;
+    min-height: 100dvh;
+    overflow: auto;
+    padding: 16px 12px;
+  }
+
+  .authCard {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .welcomePanel,
+  .formPanel {
+    padding: 30px 24px;
+  }
+
+  .welcomeTop {
+    min-height: auto;
+  }
+
+  .registerLayout .welcomePanel,
+  .registerLayout .formPanel {
+    order: initial;
+  }
+
+  .brandLogo {
+    width: 190px;
+  }
+}
+
+@media (width <= 600px) {
+  .page {
+    padding: 10px;
+  }
+
+  .authCard {
+    border-radius: 18px;
+  }
+
+  .welcomePanel h1 {
+    font-size: 1.7rem;
+  }
+
+  .formPanel h2 {
+    font-size: 1.4rem;
+  }
+
+  .welcomePanel,
+  .formPanel {
+    padding: 18px 14px;
+  }
+
+  .description,
+  .bullets li,
+  .switchText {
+    font-size: 0.85rem;
+  }
+
+  .formNote {
+    font-size: 0.84rem;
+    margin-bottom: 10px;
+  }
+
+  .form {
+    gap: 6px;
+  }
+
+  .form label {
+    font-size: 0.8rem;
+  }
+
+  .inlineHelp {
+    font-size: 0.8rem;
+  }
+
+  .form input {
+    padding: 10px 11px;
+    font-size: 0.86rem;
+  }
+
+  .homeLink {
+    width: 96px;
+    height: 34px;
+    padding: 0 10px;
+  }
+
+  .homeText {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcomeMoveToLeft,
+  .welcomeMoveToRight,
+  .formMoveToLeft,
+  .formMoveToRight {
+    animation: none;
+  }
+
+  .formPanel {
+    animation-delay: 0s;
+  }
+}

@@ -1,0 +1,480 @@
+.page {
+  min-height: 100vh;
+  color: white;
+  background:
+    radial-gradient(circle at -5% 95%, #3f1458 10%, transparent 40%),
+    radial-gradient(circle at 120% 10%, #3f1458 15%, transparent 15%),
+    radial-gradient(circle at 100% 100%, #3f1458 15%, transparent 40%),
+    #882bbe;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px 20px 54px;
+}
+
+.marketIntro {
+  margin-top: 8px;
+  max-width: 760px;
+}
+
+.marketIntro h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.06;
+  margin-bottom: 10px;
+}
+
+.label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 999px;
+  padding: 7px 12px;
+  background: rgb(255 255 255 / 10%);
+  margin-bottom: 10px;
+}
+
+.marketIntro p {
+  max-width: 70ch;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #e3d8f0;
+}
+
+.filtersRow {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filters button {
+  border: 1px solid rgb(255 255 255 / 34%);
+  background: rgb(14 8 25 / 34%);
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background: rgb(255 255 255 / 18%);
+}
+
+.filterActive {
+  border-color: #fff !important;
+  background: #fff !important;
+  color: #2a1240 !important;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(255 255 255 / 34%);
+  background: rgb(14 8 25 / 34%);
+  border-radius: 999px;
+  padding: 4px 10px;
+  min-width: 250px;
+  flex: 0 0 300px;
+}
+
+.searchBar input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  padding: 6px 8px;
+  outline: none;
+}
+
+.searchBar input::placeholder {
+  color: rgb(255 255 255 / 72%);
+}
+
+.searchBar button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sectionBlock {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgb(255 255 255 / 16%);
+  background: linear-gradient(135deg, rgb(255 255 255 / 12%) 0%, rgb(255 255 255 / 4%) 100%);
+  box-shadow: 0 14px 30px rgb(22 7 34 / 22%);
+}
+
+.sectionHeader {
+  margin-bottom: 12px;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(1.55rem, 4vw, 2.2rem);
+  color: #fff;
+  letter-spacing: -0.2px;
+}
+
+.sectionHeader h2 span {
+  color: #c98eff;
+}
+
+.sectionHeader p {
+  color: #e3d8f0;
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  border-radius: 14px;
+  border: 1px solid #d2d7e5;
+  background: #fff;
+  color: #1a1030;
+  box-shadow: 0 10px 22px rgb(7 3 15 / 16%);
+  overflow: hidden;
+}
+
+.imageWrap {
+  position: relative;
+  height: 190px;
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageUpcoming img {
+  filter: grayscale(100%);
+}
+
+.sportTag,
+.statusTag {
+  position: absolute;
+  top: 12px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sportTag {
+  left: 12px;
+  background: rgb(14 17 30 / 82%);
+  color: #fff;
+}
+
+.statusTag {
+  right: 12px;
+  color: #fff;
+}
+
+.statusUpcoming {
+  background: linear-gradient(135deg, #a74ef5 0%, #8f36e2 100%);
+}
+
+.statusRecent {
+  background: linear-gradient(135deg, #2f6ed4 0%, #4b8cff 100%);
+}
+
+.statusPast {
+  background: #5f5b6a;
+}
+
+.cardBody {
+  padding: 14px 14px 16px;
+}
+
+.cardBody h3 {
+  color: #170f30;
+  font-size: 1.02rem;
+  line-height: 1.3;
+  min-height: 44px;
+}
+
+.metaList {
+  list-style: none;
+  margin-top: 10px;
+  display: grid;
+  gap: 6px;
+  color: #5f558b;
+  font-size: 0.9rem;
+}
+
+.metaList li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.metaList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #8f36e2;
+}
+
+.galleryLink {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #8f36e2;
+  background: linear-gradient(135deg, #8a35df 0%, #9f4be7 100%);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.galleryLink:hover {
+  filter: brightness(1.08);
+}
+
+.upcomingHint {
+  margin-top: 12px;
+  color: #6f6795;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dateModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  background: rgb(7 5 12 / 64%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.dateModalOverlayVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dateModal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.98);
+  z-index: 1600;
+  width: min(560px, 92vw);
+  border-radius: 16px;
+  border: 1px solid #d6c8e8;
+  background: #fff;
+  color: #170f30;
+  box-shadow: 0 22px 44px rgb(0 0 0 / 34%);
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dateModalOpen {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.dateModalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dateModalHeader h3 {
+  font-size: 1.1rem;
+  color: #24123b;
+}
+
+.dateModalHeader button {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #2a1240;
+  background: #f2e8ff;
+  font-weight: 700;
+}
+
+.dateModalText {
+  margin-top: 8px;
+  color: #5f558b;
+  font-size: 0.9rem;
+}
+
+.dayButtons {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.dayButton {
+  border: 1px solid #d8c5f0;
+  border-radius: 10px;
+  background: #fff;
+  color: #2a1240;
+  padding: 9px 10px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dayButton:hover {
+  border-color: #8f36e2;
+  background: #f7f0ff;
+}
+
+.dayButtonActive {
+  border-color: #8f36e2;
+  background: #f7f0ff;
+  box-shadow: inset 0 0 0 1px #8f36e2;
+}
+
+.modalActions {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.viewDayButton {
+  width: 100%;
+  border: 1px solid #d8c5f0;
+  border-radius: 10px;
+  background: #fff;
+  color: #2a1240;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.viewDayButton:hover {
+  border-color: #8f36e2;
+  background: #f7f0ff;
+}
+
+.viewDayButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.viewAllButton {
+  width: 100%;
+  border: 1px solid #8f36e2;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8a35df 0%, #9f4be7 100%);
+  color: white;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.viewAllButton:hover {
+  filter: brightness(1.08);
+}
+
+@media (width <= 980px) {
+  .container {
+    padding: 18px 16px 36px;
+  }
+
+  .sectionBlock {
+    padding: 12px;
+  }
+
+  .filtersRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBar {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 700px) {
+  .container {
+    padding: 16px 14px 30px;
+  }
+
+  .marketIntro p {
+    font-size: 0.94rem;
+  }
+
+  .filters button {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .searchBar {
+    border-radius: 14px;
+  }
+
+  .sectionBlock {
+    margin-top: 16px;
+    border-radius: 14px;
+    padding: 10px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.42rem;
+  }
+
+  .sectionHeader p {
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cardBody h3 {
+    min-height: 0;
+  }
+
+}
