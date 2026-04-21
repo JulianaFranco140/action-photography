@@ -20,10 +20,10 @@
 .navbar {
   display: flex;
   align-items: center;
-  background-color: rgb(255 255 255 / 20%);
+  background-color: var(--white-20);
   border-radius: 25px;
   padding: 10px 35px;
-  box-shadow: 0 10px 30px #3f14584d;
+  box-shadow: 0 10px 30px var(--gradient-dark-subtle-rgb2);
   box-sizing: border-box;
 }
 
@@ -50,11 +50,11 @@
 }
 
 .active {
-  background-color: #3f14584a;
+  background-color: rgb(63 20 88 / 29%);
 }
 
 .navLink:hover {
-  background-color: #9833d2;
+  background-color: var(--primary-light);
 }
 
 .rightControls {
@@ -81,21 +81,21 @@
 .loginButton {
   color: white;
   border: 1px solid rgb(255 255 255 / 45%);
-  background: rgb(255 255 255 / 10%);
+  background: var(--white-10);
 }
 
 .registerButton {
-  color: #3f1458;
+  color: var(--primary-dark);
   border: 1px solid transparent;
-  background: white;
+  background: var(--white);
 }
 
 .loginButton:hover {
-  background: rgb(255 255 255 / 18%);
+  background: var(--white-18);
 }
 
 .registerButton:hover {
-  background: #f2e8fb;
+  background: var(--button-bg-hover);
 }
 
 @media (width <= 920px) {

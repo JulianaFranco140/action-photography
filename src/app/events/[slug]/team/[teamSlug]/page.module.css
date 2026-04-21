@@ -2,10 +2,10 @@
   min-height: 100vh;
   color: white;
   background:
-    radial-gradient(circle at -5% 95%, #3f1458 10%, transparent 40%),
-    radial-gradient(circle at 120% 10%, #3f1458 15%, transparent 15%),
-    radial-gradient(circle at 100% 100%, #3f1458 15%, transparent 40%),
-    #882bbe;
+    radial-gradient(circle at -5% 95%, var(--primary-dark) 10%, transparent 40%),
+    radial-gradient(circle at 120% 10%, var(--primary-dark) 15%, transparent 15%),
+    radial-gradient(circle at 100% 100%, var(--primary-dark) 15%, transparent 40%),
+    var(--primary-main);
   background-attachment: fixed;
 }
 
@@ -25,7 +25,7 @@
 
 .backLink {
   display: inline-block;
-  color: white;
+  color: var(--white);
   opacity: 0.9;
   text-decoration: none;
   margin-bottom: 12px;
@@ -52,10 +52,10 @@
   bottom: 18px;
   right: 24px;
   z-index: 1000;
-  border: 1px solid rgb(255 255 255 / 50%);
+  border: 1px solid var(--white-50);
   background: rgb(63 20 88 / 82%);
   backdrop-filter: blur(8px);
-  color: white;
+  color: var(--white);
   border-radius: 50%;
   width: 56px;
   height: 56px;
@@ -75,9 +75,9 @@
   height: 20px;
   border-radius: 999px;
   padding: 0 5px;
-  background: white;
-  color: #150826;
-  border: 1px solid rgb(63 20 88 / 30%);
+  background: var(--white);
+  color: var(--badge-bg);
+  border: 1px solid var(--gradient-dark-subtle-rgb2);
   font-size: 11px;
   font-weight: 700;
   display: inline-flex;
@@ -86,8 +86,8 @@
 }
 
 .cartButton:hover {
-  background: white;
-  color: #3f1458;
+  background: var(--white);
+  color: var(--primary-dark);
 }
 
 .grid {
@@ -148,7 +148,7 @@
 
 .cardFooter button:hover {
   background: white;
-  color: #3f1458;
+  color: var(--primary-dark);
 }
 
 .cartOverlay {
@@ -173,9 +173,9 @@
   z-index: 1100;
   width: min(420px, 92vw);
   height: 100dvh;
-  background: #fff;
-  color: #170a2a;
-  border-left: 2px solid #2b123f;
+  background: var(--white);
+  color: var(--purple-very-dark-team);
+  border-left: 2px solid var(--purple-team-dark);
   box-shadow: -18px 0 35px rgb(0 0 0 / 35%);
   transform: translateX(100%);
   transition: transform 0.25s ease;
@@ -198,7 +198,7 @@
 
 .cartHeader h2 {
   font-size: 1.15rem;
-  color: #2b123f;
+  color: var(--purple-team-dark);
 }
 
 .cartHeader button {
@@ -207,8 +207,8 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background: #f4ecff;
-  color: #2b123f;
+  background: var(--ui-purple-team-light);
+  color: var(--purple-team-dark);
   font-weight: 700;
 }
 
@@ -217,8 +217,8 @@
   padding: 14px;
   border: 1px dashed #c7acd9;
   border-radius: 10px;
-  color: #4f3a63;
-  background: #fbf8ff;
+  color: var(--purple-team-gray-light);
+  background: var(--ui-purple-team-lighter);
   font-size: 0.92rem;
   line-height: 1.4;
 }
@@ -234,7 +234,7 @@
 .cartItem {
   border: 1px solid #e9dff5;
   border-radius: 10px;
-  background: #fff;
+  background: var(--white);
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -244,19 +244,19 @@
 .cartItemTitle {
   font-size: 0.88rem;
   font-weight: 600;
-  color: #1d102e;
+  color: var(--purple-team-lighter);
 }
 
 .cartItemMeta {
   margin-top: 4px;
   font-size: 0.78rem;
-  color: #6c5982;
+  color: var(--purple-team-gray);
 }
 
 .cartItemPrice {
   font-size: 0.82rem;
   font-weight: 700;
-  color: #2b123f;
+  color: var(--purple-team-dark);
   white-space: nowrap;
 }
 
@@ -264,7 +264,7 @@
   margin-top: auto;
   border-top: 1px solid #e9dff5;
   padding: 14px;
-  background: #fff;
+  background: var(--white);
 }
 
 .cartTotalRow {
@@ -272,7 +272,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  color: #2b123f;
+  color: var(--purple-team-dark);
 }
 
 .cartTotalRow strong {
@@ -288,7 +288,7 @@
 .clearButton,
 .checkoutButton {
   border-radius: 10px;
-  border: 1px solid #2b123f;
+  border: 1px solid var(--purple-team-dark);
   padding: 10px;
   font-size: 0.84rem;
   font-weight: 700;
@@ -296,18 +296,18 @@
 }
 
 .clearButton {
-  background: #fff;
-  color: #2b123f;
+  background: var(--white);
+  color: var(--purple-team-dark);
 }
 
 .checkoutButton {
-  background: #2b123f;
+  background: var(--purple-team-dark);
   color: white;
 }
 
 .checkoutButton:disabled {
-  background: #91829f;
-  border-color: #91829f;
+  background: var(--border-purple-team);
+  border-color: var(--border-purple-team);
   cursor: not-allowed;
 }
 

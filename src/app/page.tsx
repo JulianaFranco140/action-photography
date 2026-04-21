@@ -12,7 +12,7 @@ export default function Home() {
           <div className={styles.heroContent}>
             <h1>REVIVE LA EMOCIÓN</h1>
             <p>
-              Encuentra las mejores fotos de tu equipo de cheerleading. Momentos únicos capturados por profesionales.
+              Encuentra y descarga tus fotos oficiales en cuestión de segundos.
             </p>
             <Link className={styles.ctaButton} href="/events">
               Ver todos los Eventos

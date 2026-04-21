@@ -1,6 +1,158 @@
 :root {
+  /* Colores base */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Colores de marca - Púrpura */
+  --primary-dark: #3f1458;
+  --primary-main: #882bbe;
+  --primary-light: #9833d2;
+  --primary-lighter: #b976ee;
+  --primary-lightest: #f5ebff;
+
+  /* Colores neutros */
+  --white: #ffffff;
+  --white-80: rgb(255 255 255 / 80%);
+  --white-72: rgb(255 255 255 / 72%);
+  --white-50: rgb(255 255 255 / 50%);
+  --white-45: rgb(255 255 255 / 45%);
+  --white-40: rgb(255 255 255 / 40%);
+  --white-34: rgb(255 255 255 / 34%);
+  --white-28: rgb(255 255 255 / 28%);
+  --white-26: rgb(255 255 255 / 26%);
+  --white-24: rgb(255 255 255 / 24%);
+  --white-22: rgb(255 255 255 / 22%);
+  --white-20: rgb(255 255 255 / 20%);
+  --white-18: rgb(255 255 255 / 18%);
+  --white-16: rgb(255 255 255 / 16%);
+  --white-14: rgb(255 255 255 / 14%);
+  --white-10: rgb(255 255 255 / 10%);
+  --white-9: rgb(255 255 255 / 9%);
+  --white-6: rgb(255 255 255 / 6%);
+  --white-4: rgb(255 255 255 / 4%);
+  --white-12: rgb(255 255 255 / 12%);
+
+  --gray-900: #0a0a0a;
+  --gray-800: #171717;
+  --gray-700: #2a1f33;
+  --gray-600: #475569;
+  --gray-500: #64748b;
+  --gray-400: #9b9b9b;
+  --gray-200: #ededed;
+
+  /* Colores de fondo */
+  --bg-dark: #070b2a;
+  --bg-dark-light: #0f172a;
+  --bg-light: #f3f5fb;
+  --bg-light-secondary: #fcfbff;
+
+  /* Colores de interfaz */
+  --border-light: #ddc9ed;
+  --border-lighter: #ddd6fe;
+  --border-dark: #1c2352;
+  --text-dark-form: #2a1f33;
+  --text-label: #503867;
+  --text-check: #614878;
+  --text-light-accent: #e3d8f0;
+  --text-light: #c4b5fd;
+  --button-bg: #f8f5ff;
+  --button-bg-hover: #f3ecff;
+  --badge-bg: #150826;
+
+  /* Gradientes de púrpura para fondos */
+  --gradient-pink-purple-rgb1: rgb(206 122 255 / 98%);
+  --gradient-purple-rgb1: rgb(152 51 210 / 94%);
+  --gradient-purple-dark-rgb1: rgb(63 20 88 / 98%);
+  --gradient-purple-light-rgb: rgb(124 58 237 / 26%);
+  --gradient-purple-shadow-rgb: rgb(124 58 237 / 14%);
+  --gradient-purple-accent-rgb: rgb(124 58 237 / 16%);
+  --gradient-purple-dark-shadow-rgb: rgb(63 20 88 / 30%);
+  --gradient-dark-rgb: rgb(14 8 25 / 34%);
+  --gradient-very-dark-rgb: rgb(20 7 31 / 32%);
+  --gradient-very-dark-rgb2: rgb(40 12 61 / 46%);
+  --gradient-dark-overlay-rgb: rgb(3 5 17 / 50%);
+  --gradient-dark-subtle-rgb2: rgb(63 20 88 / 26%);
+  --gradient-subtle-rgb: rgb(152 51 210 / 12%);
+  --gradient-shadow-rgb: rgb(152 51 210 / 14%);
+  --gradient-dark-subtle-rgb2: rgb(63 20 88 / 26%);
+
+  /* Colores de estado */
+  --success: #16a34a;
+  --warning-bg: #fff7ed;
+  --warning-border: #fed7aa;
+  --success-bg: #ecfdf5;
+  --success-border: #86efac;
+  --error-bg: #fef2f2;
+  --error-border: #fca5a5;
+
+  /* Colores adicionales de UI */
+  --text-secondary: #334155;
+  --ui-light-purple: #ede9fe;
+  --ui-lighter-purple: #f5f3ff;
+  --ui-purple-gradient-light: #a78bfa;
+  --purple-dark: #5b21b6;
+  --purple-medium: #6f2f9a;
+  --purple-darker: #2a1240;
+  --purple-very-dark: #1a1030;
+  --purple-gray: #5f5b6a;
+  --purple-gray-light: #5f558b;
+  --purple-gray-lighter: #6f6795;
+  --purple-bright: #8f36e2;
+  --purple-accent-dark: #170f30;
+  --purple-accent-darker: #24123b;
+  --purple-accent-lightest: #f2e8ff;
+  --border-purple-lighter: #d6c8e8;
+  --border-purple-light-2: #d8c5f0;
+  --gray-slate: #64748b;
+  --gray-slate-light: #475569;
+  --gray-general: #6b7280;
+  --gray-very-dark: #111827;
+  --ui-very-light-purple: #faf9ff;
+  --ui-purple-accent: #f7f0ff;
+  --success-green: #22c55e;
+  --purple-team-dark: #2b123f;
+  --purple-team-lighter: #1d102e;
+  --purple-team-gray: #6c5982;
+  --purple-team-gray-light: #4f3a63;
+  --ui-purple-team-light: #f4ecff;
+  --ui-purple-team-lighter: #fbf8ff;
+  --border-purple-team: #91829f;
+  --purple-very-dark-team: #170a2a;
+
+  /* Colores de estado para órdenes */
+  --order-paid-bg: #ecfdf5;
+  --order-paid-text: #166534;
+  --order-pending-bg: #fff7ed;
+  --order-pending-text: #9a3412;
+  --order-review-bg: #f5f3ff;
+  --order-review-text: #6d28d9;
+  --order-refunded-bg: #f1f5f9;
+  --order-refunded-text: #334155;
+  --filter-bg-light: #faf5ff;
+  --filter-bg-active: #f3ecff;
+  --border-purple-light: #d8b4fe;
+  --border-purple-medium: #8b5cf6;
+  --border-gray-light: #e2e8f0;
+
+  /* Variantes con opacidad para efectos hover */
+  --primary-lightest-alpha: rgb(245 235 255 / 31%);
+  --primary-dark-alpha: rgb(42 13 59 / 51%);
+
+  /* Colores adicionales para componentes admin */
+  --admin-gradient-purple-dark: #6938ef;
+  --admin-gradient-purple-light: #8b5cf6;
+  --admin-gradient-accent: #7c3aed;
+  --admin-blue-dark: #3a468f;
+  --admin-bg-dark: #0d143f;
+  --admin-border-dark: #2a3474;
+  --admin-text-light: rgb(226 232 255 / 90%);
+
+  /* Colores adicionales para secciones */
+  --accent-purple: #c98eff;
+
+  /* Colores nuevos */
+  --accent-yellow: #ffcc3f;
+  --accent-orange: #ee7632;
 }
 
 @media (prefers-color-scheme: dark) {
