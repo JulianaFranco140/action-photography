@@ -1,10 +1,10 @@
 .page {
   min-height: 100vh;
   background:
-    radial-gradient(circle at 12% -12%, rgb(139 92 246 / 20%), transparent 44%),
-    radial-gradient(circle at 88% 8%, rgb(124 58 237 / 14%), transparent 34%),
-    #f3f5fb;
-  color: #0f172a;
+    radial-gradient(circle at 12% -12%, var(--gradient-purple-accent-rgb), transparent 44%),
+    radial-gradient(circle at 88% 8%, var(--gradient-purple-shadow-rgb), transparent 34%),
+    var(--bg-light);
+  color: var(--bg-dark-light);
   font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
 }
 
@@ -25,9 +25,9 @@
 
 .sidebarIconButton {
   margin-top: 2px;
-  border: 1px solid #c4b5fd;
-  background: linear-gradient(180deg, #fff 0%, #f8f5ff 100%);
-  color: #5b21b6;
+  border: 1px solid var(--text-light);
+  background: linear-gradient(180deg, var(--white) 0%, var(--button-bg) 100%);
+  color: var(--purple-dark);
   border-radius: 10px;
   width: 38px;
   height: 38px;
@@ -36,11 +36,11 @@
   justify-content: center;
   cursor: pointer;
   flex-shrink: 0;
-  box-shadow: 0 6px 14px rgb(124 58 237 / 16%);
+  box-shadow: 0 6px 14px var(--gradient-purple-accent-rgb);
 }
 
 .sidebarIconButton:hover {
-  background: #f3ecff;
+  background: var(--button-bg-hover);
 }
 
 .content h1 {
@@ -48,11 +48,11 @@
   font-weight: 700;
   letter-spacing: -0.2px;
   margin-bottom: 4px;
-  color: #0f172a;
+  color: var(--bg-dark-light);
 }
 
 .subtitle {
-  color: #475569;
+  color: var(--gray-600);
   font-size: 0.93rem;
   line-height: 1.5;
 }
@@ -66,8 +66,8 @@
 
 .summaryCard {
   border-radius: 12px;
-  border: 1px solid #ddd6fe;
-  background: linear-gradient(180deg, #fff 0%, #fcfbff 100%);
+  border: 1px solid var(--border-lighter);
+  background: linear-gradient(180deg, var(--white) 0%, var(--bg-light-secondary) 100%);
   padding: 14px;
   box-shadow: 0 8px 18px rgb(124 58 237 / 10%);
   display: grid;
@@ -75,20 +75,20 @@
 }
 
 .summaryCard p {
-  color: #64748b;
+  color: var(--gray-500);
   font-size: 0.82rem;
 }
 
 .summaryCard strong {
   font-size: 1.5rem;
-  color: #0f172a;
+  color: var(--bg-dark-light);
 }
 
 .panelCard {
   margin-top: 16px;
   border-radius: 12px;
-  border: 1px solid #ddd6fe;
-  background: linear-gradient(180deg, #fff 0%, #fdfbff 100%);
+  border: 1px solid var(--border-lighter);
+  background: linear-gradient(180deg, var(--white) 0%, #fdfbff 100%);
   box-shadow: 0 8px 18px rgb(124 58 237 / 9%);
   padding: 14px 16px;
 }
@@ -105,7 +105,7 @@
 .panelCard h2 {
   font-size: 1.02rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--bg-dark-light);
 }
 
 .filters {
@@ -115,19 +115,19 @@
 }
 
 .filterChip {
-  border: 1px solid #d8b4fe;
+  border: 1px solid var(--border-purple-light);
   border-radius: 999px;
-  background: #faf5ff;
-  color: #5b21b6;
+  background: var(--filter-bg-light);
+  color: var(--purple-dark);
   padding: 6px 10px;
   font-size: 0.8rem;
   cursor: pointer;
 }
 
 .filterChipActive {
-  border-color: #8b5cf6;
-  color: #5b21b6;
-  background: #f5f3ff;
+  border-color: var(--border-purple-medium);
+  color: var(--purple-dark);
+  background: var(--ui-lighter-purple);
 }
 
 .tableWrap {
@@ -145,18 +145,18 @@
 .ordersTable td {
   text-align: left;
   padding: 10px 8px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border-gray-light);
   font-size: 0.84rem;
   white-space: nowrap;
 }
 
 .ordersTable th {
-  color: #334155;
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
 .selectedOrderRow {
-  background: #ede9fe;
+  background: var(--ui-light-purple);
 }
 
 .statusPill {
@@ -169,37 +169,37 @@
 }
 
 .status_Pagada {
-  background: #ecfdf5;
-  color: #166534;
+  background: var(--order-paid-bg);
+  color: var(--order-paid-text);
 }
 
 .status_Pendiente {
-  background: #fff7ed;
-  color: #9a3412;
+  background: var(--order-pending-bg);
+  color: var(--order-pending-text);
 }
 
 .status_En_revision {
-  background: #f5f3ff;
-  color: #6d28d9;
+  background: var(--order-review-bg);
+  color: var(--order-review-text);
 }
 
 .status_Reembolsada {
-  background: #f1f5f9;
-  color: #334155;
+  background: var(--order-refunded-bg);
+  color: var(--order-refunded-text);
 }
 
 .trackButton {
-  border: 1px solid #c4b5fd;
+  border: 1px solid var(--text-light);
   border-radius: 8px;
-  background: #faf5ff;
-  color: #5b21b6;
+  background: var(--filter-bg-light);
+  color: var(--purple-dark);
   padding: 5px 9px;
   font-size: 0.77rem;
   cursor: pointer;
 }
 
 .trackButton:hover {
-  background: #f3ecff;
+  background: var(--filter-bg-active);
 }
 
 .bottomGrid {
@@ -216,7 +216,7 @@
 }
 
 .pendingRow {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-gray-light);
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -231,24 +231,24 @@
 }
 
 .pendingRow span {
-  color: #64748b;
+  color: var(--gray-slate);
   font-size: 0.8rem;
 }
 
 .pendingRow strong {
-  color: #9a3412;
+  color: var(--order-pending-text);
   font-size: 0.8rem;
 }
 
 .trackOrderMeta {
   margin-top: 10px;
-  color: #475569;
+  color: var(--gray-slate-light);
   font-size: 0.82rem;
 }
 
 .trackOrderMetaSecondary {
   margin-top: 4px;
-  color: #334155;
+  color: var(--text-secondary);
   font-size: 0.8rem;
 }
 
@@ -266,7 +266,7 @@
   border: 1px solid #ece7ff;
   border-radius: 10px;
   padding: 7px 8px;
-  background: #fcfbff;
+  background: var(--ui-very-light-purple);
 }
 
 .dot {
@@ -275,12 +275,12 @@
   height: 10px;
   border-radius: 999px;
   border: 2px solid #94a3b8;
-  background: #fff;
+  background: var(--white);
 }
 
 .dotDone {
-  border-color: #16a34a;
-  background: #22c55e;
+  border-color: var(--success);
+  background: var(--success-green);
 }
 
 .timelineItem p {
@@ -289,13 +289,13 @@
 }
 
 .timelineItem small {
-  color: #64748b;
+  color: var(--gray-slate);
   font-size: 0.72rem;
 }
 
 .emptyState {
   margin-top: 10px;
-  color: #64748b;
+  color: var(--gray-slate);
   font-size: 0.85rem;
 }
 
@@ -322,13 +322,13 @@
 }
 
 .topProductRow span {
-  color: #64748b;
+  color: var(--gray-slate);
   font-size: 0.78rem;
 }
 
 .topProductRow strong {
   font-size: 0.8rem;
-  color: #0f172a;
+  color: var(--bg-dark-light);
 }
 
 .modalOverlay {
@@ -355,8 +355,8 @@
   max-height: 92vh;
   overflow: auto;
   border-radius: 14px;
-  border: 1px solid #d8b4fe;
-  background: linear-gradient(180deg, #fff 0%, #fcf9ff 100%);
+  border: 1px solid var(--border-purple-light);
+  background: linear-gradient(180deg, var(--white) 0%, #fcf9ff 100%);
   box-shadow: 0 20px 44px rgb(76 29 149 / 28%);
   padding: 12px;
 }
@@ -371,7 +371,7 @@
 .modalHeader h2 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--bg-dark-light);
 }
 
 .modalSummarySection,
@@ -380,14 +380,14 @@
   border: 1px solid #e9e5ff;
   border-radius: 12px;
   padding: 10px;
-  background: #fff;
+  background: var(--white);
 }
 
 .modalSectionTitle {
   font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #6d28d9;
+  color: var(--order-review-text);
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -402,33 +402,33 @@
   border: 1px solid #ede9fe;
   border-radius: 10px;
   padding: 7px 8px;
-  background: #faf9ff;
+  background: var(--ui-very-light-purple);
   display: grid;
   gap: 1px;
 }
 
 .modalInfoItem span {
-  color: #6b7280;
+  color: var(--gray-general);
   font-size: 0.69rem;
 }
 
 .modalInfoItem strong {
-  color: #111827;
+  color: var(--gray-very-dark);
   font-size: 0.78rem;
 }
 
 .modalCloseButton {
-  border: 1px solid #c4b5fd;
+  border: 1px solid var(--text-light);
   border-radius: 8px;
-  background: #faf5ff;
-  color: #5b21b6;
+  background: var(--filter-bg-light);
+  color: var(--purple-dark);
   padding: 6px 10px;
   font-size: 0.8rem;
   cursor: pointer;
 }
 
 .modalCloseButton:hover {
-  background: #f3ecff;
+  background: var(--filter-bg-active);
 }
 
 @media (width <= 1200px) {

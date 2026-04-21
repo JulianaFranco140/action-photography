@@ -5,21 +5,21 @@
   overflow: hidden;
   padding: 16px;
   background:
-    radial-gradient(circle at -5% 95%, #3f1458 10%, transparent 40%),
-    radial-gradient(circle at 120% 10%, #3f1458 15%, transparent 15%),
-    radial-gradient(circle at 100% 100%, #3f1458 15%, transparent 40%),
-    #882bbe;
+    radial-gradient(circle at -5% 95%, var(--primary-dark) 10%, transparent 40%),
+    radial-gradient(circle at 120% 10%, var(--primary-dark) 15%, transparent 15%),
+    radial-gradient(circle at 100% 100%, var(--primary-dark) 15%, transparent 40%),
+    var(--primary-main);
 }
 
 .authCard {
   width: min(1040px, 100%);
   height: min(640px, calc(100dvh - 32px));
-  background: #fff;
+  background: var(--white);
   border-radius: 24px;
   overflow: hidden;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  box-shadow: 0 30px 80px rgb(20 7 31 / 32%);
+  box-shadow: 0 30px 80px var(--gradient-very-dark-rgb);
 }
 
 @keyframes welcomeMoveToLeft {
@@ -80,9 +80,9 @@
 
 .welcomePanel {
   padding: 42px 44px;
-  color: #fff;
+  color: var(--white);
   background:
-    linear-gradient(160deg, rgb(206 122 255 / 98%) 0%, rgb(152 51 210 / 94%) 45%, rgb(63 20 88 / 98%) 100%);
+    linear-gradient(160deg, var(--gradient-pink-purple-rgb1) 0%, var(--gradient-purple-rgb1) 45%, var(--gradient-purple-dark-rgb1) 100%);
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
@@ -161,7 +161,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--white);
   opacity: 0.9;
   position: absolute;
   left: 0;
@@ -184,7 +184,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #2a1f33;
+  color: var(--text-dark-form);
   animation-delay: 0.05s;
 }
 
@@ -196,15 +196,15 @@
 .formNote {
   font-size: 0.92rem;
   line-height: 1.45;
-  color: #614878;
+  color: var(--text-check);
   margin-bottom: 14px;
 }
 
 .homeLink {
   align-self: flex-start;
   text-decoration: none;
-  color: #fff;
-  background: linear-gradient(135deg, #6f2f9a 0%, #9833d2 100%);
+  color: var(--white);
+  background: linear-gradient(135deg, var(--purple-medium) 0%, var(--primary-light) 100%);
   border-radius: 999px;
   height: 38px;
   width: 38px;
@@ -251,30 +251,30 @@
 .form label {
   font-size: 0.86rem;
   font-weight: 700;
-  color: #503867;
+  color: var(--text-label);
   margin-top: 2px;
 }
 
 .form input {
   width: 100%;
-  background-color: #fff;
-  border: 1px solid #ddc9ed;
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
   border-radius: 12px;
   padding: 11px 12px;
   font-size: 0.9rem;
-  color: #2a1f33;
+  color: var(--text-dark-form);
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .form input::placeholder {
-  color: #9b9b9b;
+  color: var(--gray-400);
   opacity: 1;
 }
 
 .form input:focus {
-  border-color: #9833d2;
-  box-shadow: 0 0 0 4px rgb(152 51 210 / 14%);
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 4px var(--gradient-shadow-rgb);
 }
 
 .formOptions {
@@ -284,22 +284,22 @@
   justify-content: space-between;
   gap: 10px;
   font-size: 0.86rem;
-  color: #614878;
+  color: var(--text-check);
 }
 
 .formOptions a {
-  color: #6f2f9a;
+  color: var(--purple-medium);
   font-weight: 700;
 }
 
 .inlineHelp {
   margin-top: 12px;
   font-size: 0.86rem;
-  color: #614878;
+  color: var(--text-check);
 }
 
 .inlineHelp a {
-  color: #6f2f9a;
+  color: var(--purple-medium);
   font-weight: 700;
 }
 
@@ -309,7 +309,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.82rem;
-  color: #614878;
+  color: var(--text-check);
 }
 
 .checkRow input {
@@ -321,8 +321,8 @@
   margin-top: 10px;
   border: none;
   border-radius: 14px;
-  background: linear-gradient(135deg, #6f2f9a 0%, #9833d2 100%);
-  color: #fff;
+  background: linear-gradient(135deg, var(--purple-medium) 0%, var(--primary-light) 100%);
+  color: var(--white);
   padding: 12px;
   font-size: 0.95rem;
   font-weight: 700;

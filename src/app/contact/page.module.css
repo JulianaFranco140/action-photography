@@ -1,16 +1,11 @@
 .page {
-  --violet-1: #9833d2;
-  --violet-2: #b976ee;
-  --violet-3: #3f1458;
-  --violet-5: #882bbe;
-
   min-height: 100vh;
   color: white;
   background:
-    radial-gradient(circle at -5% 95%, var(--violet-3) 10%, transparent 40%),
-    radial-gradient(circle at 120% 10%, var(--violet-3) 15%, transparent 15%),
-    radial-gradient(circle at 100% 100%, var(--violet-3) 15%, transparent 40%),
-    var(--violet-5);
+    radial-gradient(circle at -5% 95%, var(--primary-dark) 10%, transparent 40%),
+    radial-gradient(circle at 120% 10%, var(--primary-dark) 15%, transparent 15%),
+    radial-gradient(circle at 100% 100%, var(--primary-dark) 15%, transparent 40%),
+    var(--primary-main);
   background-attachment: fixed;
 }
 
@@ -38,7 +33,7 @@
 .mascot {
   width: 220px;
   max-width: 100%;
-  filter: drop-shadow(0 14px 26px rgb(40 12 61 / 46%));
+  filter: drop-shadow(0 14px 26px var(--gradient-very-dark-rgb2));
 }
 
 .heroContent {
@@ -47,11 +42,11 @@
 
 .speechBubble {
   position: relative;
-  background: linear-gradient(135deg, #fff 0%, #f5ebff 100%);
-  color: var(--violet-3);
+  background: linear-gradient(135deg, var(--white) 0%, var(--primary-lightest) 100%);
+  color: var(--primary-dark);
   border-radius: 24px;
   padding: 18px 22px;
-  box-shadow: 0 16px 32px rgb(25 8 40 / 32%);
+  box-shadow: 0 16px 32px var(--gradient-very-dark-rgb);
 }
 
 .speechBubble::before {
@@ -62,18 +57,18 @@
   transform: translateY(-50%) rotate(45deg);
   width: 24px;
   height: 24px;
-  background: #f7eeff;
+  background: var(--primary-lightest);
 }
 
 .badge {
   display: inline-block;
-  border: 1px solid rgb(63 20 88 / 26%);
+  border: 1px solid var(--gradient-dark-subtle-rgb2);
   border-radius: 999px;
   padding: 7px 13px;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
-  background: rgb(152 51 210 / 12%);
+  background: var(--gradient-subtle-rgb);
   margin-bottom: 8px;
 }
 
@@ -85,7 +80,7 @@
 }
 
 .subtitle {
-  color: var(--violet-3);
+  color: var(--primary-dark);
   opacity: 0.92;
   max-width: 58ch;
   line-height: 1.28;
@@ -104,8 +99,8 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 20px;
-  border: 1px solid rgb(255 255 255 / 24%);
-  background: linear-gradient(140deg, var(--violet-3) 0%, var(--violet-5) 100%);
+  border: 1px solid var(--white-24);
+  background: linear-gradient(140deg, var(--primary-dark) 0%, var(--primary-main) 100%);
   box-shadow: 0 14px 26px rgb(15 6 24 / 30%);
   padding: 16px 16px 14px;
   min-height: 150px;
@@ -118,7 +113,7 @@
 }
 
 .areaLabel {
-  color: var(--violet-2);
+  color: var(--primary-lighter);
   font-size: 0.88rem;
   letter-spacing: 0.8px;
   margin-bottom: 8px;
@@ -143,7 +138,7 @@
 
 .cardHint {
   margin-top: 9px;
-  color: #ebdefc;
+  color: var(--text-light-accent);
   font-size: 0.9rem;
   line-height: 1.35;
 }

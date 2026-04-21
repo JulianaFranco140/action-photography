@@ -3,7 +3,7 @@
   inset: 0;
   border: 0;
   padding: 0;
-  background: rgb(3 5 17 / 50%);
+  background: var(--gradient-dark-overlay-rgb);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
@@ -21,9 +21,9 @@
   left: 0;
   height: 100vh;
   width: min(300px, 88vw);
-  background: #070b2a;
-  color: #fff;
-  border-right: 1px solid #1c2352;
+  background: var(--bg-dark);
+  color: var(--white);
+  border-right: 1px solid var(--border-dark);
   display: flex;
   flex-direction: column;
   transform: translateX(-100%);
@@ -38,7 +38,7 @@
 .sidebarBrandWrap {
   position: relative;
   height: 58px;
-  border-bottom: 1px solid #1c2352;
+  border-bottom: 1px solid var(--border-dark);
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -66,13 +66,13 @@
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  background: rgb(255 255 255 / 14%);
-  color: white;
+  background: var(--white-14);
+  color: var(--white);
   cursor: pointer;
 }
 
 .closeButton:hover {
-  background: rgb(255 255 255 / 24%);
+  background: var(--white-24);
 }
 
 .nav {
@@ -84,7 +84,7 @@
 .navItem {
   border: 0;
   background: transparent;
-  color: #fff;
+  color: var(--white);
   text-align: left;
   text-decoration: none;
   display: block;
@@ -96,16 +96,16 @@
 }
 
 .navItem:hover {
-  background: rgb(124 58 237 / 26%);
+  background: var(--gradient-purple-light-rgb);
 }
 
 .navItemActive {
-  background: linear-gradient(90deg, #6938ef 0%, #8b5cf6 100%);
+  background: linear-gradient(90deg, var(--admin-gradient-purple-dark) 0%, var(--admin-gradient-purple-light) 100%);
 }
 
 .sidebarBottom {
   margin-top: auto;
-  border-top: 1px solid #1c2352;
+  border-top: 1px solid var(--border-dark);
 }
 
 .adminUser {
@@ -123,7 +123,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  background: linear-gradient(140deg, #7c3aed 0%, #8b5cf6 100%);
+  background: linear-gradient(140deg, var(--admin-gradient-accent) 0%, var(--admin-gradient-purple-light) 100%);
 }
 
 .adminName {
@@ -139,9 +139,9 @@
 .logoutButton {
   margin: 0 16px 16px;
   border-radius: 10px;
-  border: 1px solid #1c2352;
-  color: #fff;
-  background: rgb(255 255 255 / 6%);
+  border: 1px solid var(--border-dark);
+  color: var(--white);
+  background: var(--white-6);
   padding: 11px 12px;
   font-size: 0.88rem;
   font-weight: 700;
@@ -152,8 +152,8 @@
 }
 
 .logoutButton:hover {
-  background: rgb(255 255 255 / 14%);
-  border-color: #3a468f;
+  background: var(--white-14);
+  border-color: var(--admin-blue-dark);
 }
 
 .modalBackdrop {
@@ -168,8 +168,8 @@
 
 .modalCard {
   width: min(420px, 100%);
-  background: #0d143f;
-  border: 1px solid #2a3474;
+  background: var(--admin-bg-dark);
+  border: 1px solid var(--admin-border-dark);
   border-radius: 14px;
   box-shadow: 0 24px 48px rgb(0 0 0 / 45%);
   padding: 18px;
@@ -178,14 +178,14 @@
 .modalTitle {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
 }
 
 .modalText {
   margin-top: 8px;
   font-size: 0.9rem;
   line-height: 1.45;
-  color: rgb(226 232 255 / 90%);
+  color: var(--admin-text-light);
 }
 
 .modalActions {
@@ -206,9 +206,9 @@
 }
 
 .modalCancelButton {
-  background: rgb(255 255 255 / 9%);
-  border-color: #2a3474;
-  color: #fff;
+  background: var(--white-9);
+  border-color: var(--admin-border-dark);
+  color: var(--white);
 }
 
 .modalCancelButton:hover {
@@ -216,8 +216,8 @@
 }
 
 .modalConfirmButton {
-  background: linear-gradient(90deg, #6938ef 0%, #8b5cf6 100%);
-  color: #fff;
+  background: linear-gradient(90deg, var(--admin-gradient-purple-dark) 0%, var(--admin-gradient-purple-light) 100%);
+  color: var(--white);
 }
 
 .modalConfirmButton:hover {
